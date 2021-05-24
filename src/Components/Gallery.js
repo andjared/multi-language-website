@@ -3,7 +3,7 @@ import imageProjektovanje from '../images/projektovanje.jpg';
 import imageIzvodjenje from '../images/izvodjenje.jpg';
 import ImageGallery from 'react-image-gallery';
 
-const Galery = ({ items, showPlayButton, showIndex, thumbnailPosition }) => {
+const Gallery = ({ items, showPlayButton, showIndex, showBullets }) => {
 
     const images = [
         {
@@ -66,11 +66,11 @@ const Galery = ({ items, showPlayButton, showIndex, thumbnailPosition }) => {
         }
     ];
     return (
-        <div className="galery">
-            <h2>Our projects</h2>
-            <div><ImageGallery items={images} showPlayButton={false} showIndex={true} thumbnailPosition={'left'} /></div>
+        <div className="gallery">
+            <h2>Nasi radovi: </h2>
+            <div><ImageGallery items={images} showPlayButton={false} showIndex={true} showBullets /></div>
         </div>
     );
 }
 
-export default Galery;
+export default Gallery;

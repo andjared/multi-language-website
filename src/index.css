@@ -117,7 +117,7 @@ p{
 
 .box img {  
   /* border: 1px solid black; */
-  border-top: 20px solid rgb(100, 0, 0); ;
+  border-top: 20px solid rgb(85, 12, 12); ;
   display: inline-block;
   padding: 0.7rem;
   margin: 4rem 3rem;
@@ -147,31 +147,35 @@ p{
   font-family:Arial, Helvetica, sans-serif;
   color: rgb(100, 0, 0);
 }
-.box button {
-  color: rgb(212, 75, 75);
-  background-color: rgb(228, 198, 198);
+.button {
+  color: rgb(221, 107, 107);
   margin-top: 15px;
   padding: 0.7em;
   font-size: 16px;
   font-weight: bold;
   transition-duration: 0.4s;
-  border: none;
+  border: none !important;
 }
-.box button:hover {
+.button:hover {
   cursor: pointer;
   text-shadow: 2px 2px 5px #7933332d;
 }
-.box button:active {
+.button:focus{
+  outline: none;
+}
+/* .box button:active {
   background-color:yellow;
   border: none;
-}
+} */
 
-.galery {
+.gallery {
   padding: 5%;
   margin: 0 auto;
   height: 50vh;
   width: 50vw;
 }
+.gallery h2 {
+padding-bottom: 2%;}
 
 
 

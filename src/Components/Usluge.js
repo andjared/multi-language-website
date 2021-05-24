@@ -5,7 +5,7 @@ import imageProjektovanje from '../images/projektovanje.jpg';
 import imageIzvodjenje from '../images/izvodjenje.jpg';
 
 
-const Usluge = () => {
+const Usluge = ({ title }) => {
     // box-1 
     const text3DShort = `U okviru studija uz pomoć savremenih tehnologija se bavimo izradom visoko kvalitetnih 3D vizualizacija enterijera, eksterijera, kao i pojedinačnih elemenata (mobilijara, nameštaja i dr.).`;
     const text3DLong = `${text3DShort}
@@ -43,7 +43,10 @@ const Usluge = () => {
                 <div className="text-box">
                     <h2>3D modelovanje</h2>
                     <p>{text3D}</p>
-                    <Button handleClick={handle3D} title={text3D === text3DShort ? "Procitaj vise" : "Manje"} />
+                    <Button
+                        handleClick={handle3D}
+                        title={text3D === text3DShort ? "Procitaj vise" : "Zatvori"}
+                        color={text3D === text3DShort ? 'rgb(228, 198, 198)' : 'rgb(85, 12, 12)'} />
                 </div>
                 <img src={imageModelovanje} alt="3D" />
             </div>
@@ -52,14 +55,19 @@ const Usluge = () => {
                 <div className="text-box">
                     <h2>Pejzazna arhitektura</h2>
                     <p>{textPejzazna}</p>
-                    <Button handleClick={handlePejzazna} title={textPejzazna === textPejzaznaShort ? "Procitaj vise" : "Manje"} />
+                    <Button
+                        handleClick={handlePejzazna}
+                        title={textPejzazna === textPejzaznaShort ? "Procitaj vise" : "Zatvori"}
+                        color={textPejzazna === textPejzaznaShort ? 'rgb(228, 198, 198)' : 'rgb(85, 12, 12)'} />
                 </div>
             </div>
             <div className="box box-3">
                 <div className="text-box">
                     <h2>Izvodjenje radova</h2>
                     <p>{textIzvodjenje}</p>
-                    <Button handleClick={handleIzvodjenje} title={textIzvodjenje === textIzvodjenjeShort ? "Procitaj vise" : "Manje"} />
+                    <Button handleClick={handleIzvodjenje}
+                        title={textIzvodjenje === textIzvodjenjeShort ? "Procitaj vise" : "Zatvori"}
+                        color={textIzvodjenje === textIzvodjenjeShort ? 'rgb(228, 198, 198)' : 'rgb(85, 12, 12)'} />
                 </div>
                 <img src={imageIzvodjenje} alt="3D" />
             </div>

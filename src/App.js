@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import AboutUs from "./Components/AboutUs";
 import Footer from "./Components/Footer";
-import Galery from './Components/Galery';
+import Gallery from './Components/Gallery';
 import ContactUs from './Components/ContactUs';
 import Usluge from './Components/Usluge';
 
@@ -25,7 +25,7 @@ function App() {
             <Usluge />
           </Route>
           <Route exact path="/galery">
-            <Galery />
+            <Gallery />
           </Route>
           <Route path="/contact">
             <ContactUs />
