@@ -187,13 +187,13 @@ export default [
     description: "",
   },
   {
-    original: IMAGES.thirtyfive,
-    thumbnail: IMAGES.thirtyfive,
+    original: IMAGES.thirtyeight,
+    thumbnail: IMAGES.thirtyeight,
     description: "",
   },
   {
-    original: IMAGES.thirtyfive,
-    thumbnail: IMAGES.thirtyfive,
+    original: IMAGES.thirtynine,
+    thumbnail: IMAGES.thirtynine,
     description: "",
   },
 ];
