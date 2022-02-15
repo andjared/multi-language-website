@@ -1,23 +1,76 @@
-import { FaFacebook, FaInstagram, FaBehanceSquare, FaLinkedin, FaYoutube, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { useState, useRef } from "react";
+import Modal from "./Modal";
 
+import { translations } from "../translations";
+import emailjs from "emailjs-com";
+import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
+import MyMap from "./MyMap";
+const ContactUs = ({ language }) => {
+  // modal settings
+  const [show, setShow] = useState(false);
+  const handleShow = () => {
+    setShow(false);
+  };
+  const { name, email, subject, message, button } = translations.form;
+  /////////// CONTACT FORM EMAIL.JS  /////////////////////
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_p38jw6o",
+        form.current,
+        "user_9qqtok280efSdKKxVi3aV"
+      )
+      .then(
+        (result) => {
+          setShow(true);
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
-
-const ContactUs = () => {
-    return (
-        <div className="contact-us">
-            <ul className="icons">
-                <li><i><FaFacebook /> <a href={"https://www.facebook.com/Uredjenje-eksterijera-653299878424412/?ref=settings"} target="_blank" rel="noreferrer">Facebook</a></i></li>
-                <li><i><FaInstagram /> <a href="https://www.instagram.com/bastaisvasta/?hl=sr" target="_blank" rel="noreferrer">Instagram</a></i></li>
-                <li><i><FaBehanceSquare /><a href="https://www.behance.net/musmulica104166?fbclid=IwAR0JWTmHbbkSXMWf5sux4ac3fHH2tk0ttvZKfoTKmLJ9km1kEia2XAO7f9A" target="_blank" rel="noreferrer">Behance</a> </i></li>
-                <li><i><FaLinkedin /><a href="https://www.linkedin.com/in/marjana-selakovic-259599177/?fbclid=IwAR0tK0LZLERgHK6305ZB6i_2oVnvkJRYWvuu0pK4fbNsZGswLzB9FuqeHjU" target="_blank" rel="noreferrer">Linkedin</a> </i></li>
-                <li><i><FaYoutube /><a href="https://www.youtube.com/channel/UC7C3Gq-AndrYfkmJ5ZqsDUw/" target="_blank" rel="noreferrer">Youtube</a> </i></li>
-                <li><i><FaEnvelope />musmulica1@gmail.com</i></li>
-                <li><i><FaPhoneAlt />0616123173</i></li>
-
-            </ul>
-
+  return (
+    <div className="contact-us">
+      {/* <h2>Kontaktirajte nas</h2> */}
+      {show && <Modal handleShow={handleShow} language={language} />}
+      <form ref={form} onSubmit={sendEmail} className="email-form">
+        <label>{name[language]}</label>
+        <input type="text" name="name" required />
+        <label>{email[language]} </label>
+        <input type="email" name="email" required />
+        <label>{subject[language]} </label>
+        <textarea name="subject" required />
+        <label>{message[language]}</label>
+        <textarea name="message" required />
+        <input type="submit" value={button[language]} className="btn" />
+      </form>
+      <div className="contact-details">
+        <div className="my-map">
+          <MyMap />
         </div>
-    );
-}
+        <ul className="icons">
+          <li>
+            <i>
+              <FaEnvelopeOpenText />
+            </i>
+            <p>bastaisvasta@gmail.com</p>
+          </li>
+          <li>
+            <i>
+              <FaWhatsapp />
+            </i>
+            <p>+381616123173</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-export default ContactUs
+export default ContactUs;

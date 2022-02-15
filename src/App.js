@@ -1,40 +1,57 @@
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import AboutUs from "./Components/AboutUs";
 import Footer from "./Components/Footer";
-import Gallery from './Components/Gallery';
-import ContactUs from './Components/ContactUs';
-import Usluge from './Components/Usluge';
-
+import Gallery from "./Components/Gallery";
+import ContactUs from "./Components/ContactUs";
+import Services from "./Components/Services";
+import firstGalleryimg from "./assets/firstGalleryimg";
+import secondGalleryimg from "./assets/secondGalleryimg";
+import thirdGalleryimg from "./assets/thirdGalleryimg";
 
 function App() {
+  let languageStoredInLocalStorage = localStorage.getItem("language");
+  const [language, setLanguage] = useState(
+    languageStoredInLocalStorage || "serbian"
+  );
+  const changeLanguage = (language) => {
+    setLanguage(language);
+    storeLanguageInLocalStorage(language);
+    console.log(languageStoredInLocalStorage);
+  };
+  const images = { firstGalleryimg, secondGalleryimg, thirdGalleryimg };
+
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar language={language} handleChangeLanguage={changeLanguage} />
         <Switch>
           <Route exact path="/">
-            < Home />
+            <Home />
           </Route>
           <Route path="/about">
-            <AboutUs />
+            <AboutUs language={language} />
           </Route>
           <Route path="/usluge">
-            <Usluge />
+            <Services language={language} />
           </Route>
           <Route exact path="/galery">
-            <Gallery />
+            <Gallery language={language} items={images} />
           </Route>
           <Route path="/contact">
-            <ContactUs />
+            <ContactUs language={language} />
           </Route>
         </Switch>
-        <Footer />
-      </div >
+        <Footer language={language} />
+      </div>
     </Router>
   );
+}
+
+function storeLanguageInLocalStorage(language) {
+  localStorage.setItem("language", language);
 }
 
 export default App;

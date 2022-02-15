@@ -1,11 +1,33 @@
-
-const AboutUs = () => {
-    const aboutText = "Bašta i svašta je umetničko-inženjerski studio specijalizovan za izradu 3D vizualizacija i pejzažnu arhitekturu. Znanje i veštine kojima raspolažemo su posledica višegodišnjeg praktičnog i naučnog rada u oblasti eksterijera. Istražujući elemente prostora koji oblikuju ,,duh mesta’’, dajući mu jedinstven karakter kao principe dizajna formirali smo jedinstven pristup u dizajnu prirodom. Cilj nam nije komercijalnost i stvaranje uniformnih prostora već kreiranje zelenih površina prema potrebama i senzibilitetu korinika. Ovim principima se vodimo i prilikom kreiranja 3D vizualizacija i time nastojimo preneti apstraktne karakteristike prostora.";
-    return (
-        <div className="about-us">
-            <p>{aboutText}</p>
+import { translations } from "../../src/translations";
+import imageProject from "../assets/images/aboutus.jpg";
+import logos from "../assets/logos";
+const AboutUs = ({ language }) => {
+  return (
+    <div className="about-us">
+      <div className="top-box">
+        <div className="about-us-text">
+          <p>{translations.aboutUs[language]}</p>
         </div>
-    );
-}
+        <div className="img">
+          <img src={imageProject} alt="" />
+        </div>
+      </div>
+      <div className="bottom-box">
+        <p>{translations.clients[language]} </p>
+        {/* <p>Saradjivali smo sa: </p> */}
+        {logos.map((logo) => {
+          return (
+            <img
+              src={logo.url}
+              alt=""
+              key={logo.id}
+              className={logo.id === 1 ? "one" : "other"}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 export default AboutUs;
