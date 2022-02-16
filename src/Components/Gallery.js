@@ -1,7 +1,7 @@
 import ImageGallery from "react-image-gallery";
 import { translations } from "../translations";
 import { FaAngleDoubleDown } from "react-icons/fa";
-import gradation from "../images/gradation.jpg";
+import gradation from "../assets/images/gradation.jpg";
 import { useRef } from "react";
 
 const Gallery = ({ language, items }) => {

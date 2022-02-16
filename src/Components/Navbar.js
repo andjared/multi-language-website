@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { translations } from "../translations";
-import logo from "../assets/logo2.jpg";
+import logo from "../assets/images/logo.jpg";
 import {
   FaGlobe,
   FaInstagram,

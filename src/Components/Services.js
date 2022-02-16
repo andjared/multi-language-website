@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
-import imageModelovanje from "../images/modelovanje.jpg";
-import imageProjektovanje from "../images/projektovanje.jpg";
-import imageIzvodjenje from "../images/izvodjenje.jpg";
+import imageModelovanje from "../assets/images/modelovanje.jpg";
+import imageProjektovanje from "../assets/images/projektovanje.jpg";
+import imageIzvodjenje from "../assets/images/landscape.jpeg";
+import imagePlanting from "../assets/images/plantingplans/9.jpg";
 import { translations } from "../translations";
 
 const Services = ({ language }) => {
@@ -145,7 +146,7 @@ const Services = ({ language }) => {
       </div>
       <div className="box">
         <div className="img-box">
-          <img src={imageIzvodjenje} alt="3D" />
+          <img src={imagePlanting} alt="3D" />
         </div>
         <div className="text-box">
           <h2>{title.fourth[language]}</h2>

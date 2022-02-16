@@ -2,18 +2,23 @@ import IMAGES from "./images.js";
 
 export default [
   {
-    original: IMAGES.seven,
-    thumbnail: IMAGES.seven,
+    original: IMAGES.fiftytwo,
+    thumbnail: IMAGES.fiftytwo,
     description: "",
   },
   {
-    original: IMAGES.eight,
-    thumbnail: IMAGES.eight,
+    original: IMAGES.fiftythree,
+    thumbnail: IMAGES.fiftythree,
     description: "",
   },
   {
-    original: IMAGES.nine,
-    thumbnail: IMAGES.nine,
+    original: IMAGES.fiftyfour,
+    thumbnail: IMAGES.fiftyfour,
+    description: "",
+  },
+  {
+    original: IMAGES.fiftyfive,
+    thumbnail: IMAGES.fiftyfive,
     description: "",
   },
 ];
