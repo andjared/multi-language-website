@@ -81,7 +81,7 @@ body {
 .nav-links li a:hover {
   /* color: var(--btn-bg-color); */
   text-shadow: 2px 2px var(--btn-bg-color);
-  padding: 1.2em;
+  /* padding: 1.2em; */
 }
 .lang {
   color: var(--links-color);
@@ -137,7 +137,7 @@ body {
 .about-us {
   display: flex;
   flex-direction: column;
-  /* padding: 1em; */
+  padding: 5em;
 }
 .top-box {
   /* margin: 2em auto; */
@@ -152,7 +152,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 5em; */
+  margin-top: 3.5em;
 }
 .about-us p {
   font-size: 2vh;
@@ -167,7 +167,7 @@ body {
   max-width: 40%;
 }
 .top-box img {
-  margin-top: 2vh;
+  margin-top: 6vh;
   max-width: 100%;
 }
 

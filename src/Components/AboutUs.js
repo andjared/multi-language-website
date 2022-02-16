@@ -1,5 +1,5 @@
 import { translations } from "../../src/translations";
-import imageProject from "../assets/images/aboutus.jpg";
+import imageProject from "../assets/images/aboutus2.jpg";
 import logos from "../assets/logos";
 const AboutUs = ({ language }) => {
   return (
