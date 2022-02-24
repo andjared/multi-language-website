@@ -51,11 +51,11 @@ export default [
     thumbnail: IMAGES.ten,
     description: "",
   },
-  // {
-  //   original: IMAGES.eleven,
-  //   thumbnail: IMAGES.eleven,
-  //   description: "",
-  // },
+  {
+    original: IMAGES.eleven,
+    thumbnail: IMAGES.eleven,
+    description: "",
+  },
   {
     original: IMAGES.twelve,
     thumbnail: IMAGES.twelve,

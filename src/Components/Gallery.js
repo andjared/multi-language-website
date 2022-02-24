@@ -15,15 +15,27 @@ const Gallery = ({ language, items }) => {
       <div className="galleries">
         <div className="gallery">
           <h2>{translations.gallery.first[language]} </h2>
-          <ImageGallery items={items.firstGalleryimg} showIndex showBullets />
+          <ImageGallery
+            items={items.firstGalleryimg}
+            showIndex
+            disableKeyDown
+          />
         </div>
         <div className="gallery">
           <h2>{translations.gallery.second[language]} </h2>
-          <ImageGallery items={items.secondGalleryimg} showIndex showBullets />
+          <ImageGallery
+            items={items.secondGalleryimg}
+            showIndex
+            disableKeyDown
+          />
         </div>
         <div className="gallery">
           <h2>{translations.gallery.third[language]} </h2>
-          <ImageGallery items={items.thirdGalleryimg} showIndex showBullets />
+          <ImageGallery
+            items={items.thirdGalleryimg}
+            showIndex
+            disableKeyDown
+          />
         </div>
       </div>
       <div className="concept">
