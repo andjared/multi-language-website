@@ -1,6 +1,6 @@
 import IMAGES from "./images.js";
 
-export default [
+const secondGallery = [
   {
     original: IMAGES.fortytwo,
     thumbnail: IMAGES.fortytwo,
@@ -52,3 +52,4 @@ export default [
     description: "",
   },
 ];
+export default secondGallery;

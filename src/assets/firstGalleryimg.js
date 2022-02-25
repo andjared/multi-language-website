@@ -1,6 +1,6 @@
 import IMAGES from "./images.js";
 
-export default [
+const firstGallery = [
   {
     original: IMAGES.one,
     thumbnail: IMAGES.one,
@@ -78,7 +78,7 @@ export default [
   },
   {
     original: IMAGES.sixteen,
-    thumbnail: IMAGES.thirsixteen,
+    thumbnail: IMAGES.sixteen,
     description: "",
   },
   {
@@ -197,3 +197,4 @@ export default [
     description: "",
   },
 ];
+export default firstGallery;

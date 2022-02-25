@@ -1,6 +1,6 @@
 import IMAGES from "./images.js";
 
-export default [
+const thirdGallery = [
   {
     original: IMAGES.fiftytwo,
     thumbnail: IMAGES.fiftytwo,
@@ -22,3 +22,4 @@ export default [
     description: "",
   },
 ];
+export default thirdGallery;

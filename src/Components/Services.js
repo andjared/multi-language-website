@@ -18,7 +18,7 @@ const Services = ({ language }) => {
   const [readMoreThird, setReadMoreThird] = useState(true);
 
   //change readMore state for each chapter onclik individually
-  const toggleReadMore = (readMore, setReadMore) => {
+  const handleReadMore = (readMore, setReadMore) => {
     setReadMore(!readMore);
   };
 
@@ -35,7 +35,7 @@ const Services = ({ language }) => {
               : first[language]}
           </p>
           <Button
-            handleClick={() => toggleReadMore(readMoreFirst, setReadMoreFirst)}
+            handleClick={() => handleReadMore(readMoreFirst, setReadMoreFirst)}
             title={
               readMoreFirst
                 ? buttonTitle.more[language]
@@ -63,7 +63,7 @@ const Services = ({ language }) => {
           </p>
           <Button
             handleClick={() =>
-              toggleReadMore(readMoreSecond, setReadMoreSecond)
+              handleReadMore(readMoreSecond, setReadMoreSecond)
             }
             title={
               readMoreSecond
@@ -85,7 +85,7 @@ const Services = ({ language }) => {
               : third[language]}
           </p>
           <Button
-            handleClick={() => toggleReadMore(readMoreThird, setReadMoreThird)}
+            handleClick={() => handleReadMore(readMoreThird, setReadMoreThird)}
             title={
               readMoreThird
                 ? buttonTitle.more[language]

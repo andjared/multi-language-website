@@ -8,20 +8,8 @@ let focusIcon = L.icon({
 });
 
 const MyMap = () => {
-  // const [zoomLevel, setZoomLevel] = useState(12);
-
   const center = [44.27456335838029, 19.88409948119744];
   const position = [44.26282139975556, 19.921067487516684];
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setZoomLevel(20);
-  //     console.log(zoomLevel);
-  //   }, 2000);
-  //   return () => {
-  //     clearTimeout();
-  //   };
-  // }, [zoomLevel]);
 
   return (
     <div>

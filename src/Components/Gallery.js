@@ -9,7 +9,6 @@ const Gallery = ({ language, items }) => {
   const handleScrollButton = () => {
     conceptRef.current.scrollIntoView({ behavior: "smooth" });
   };
-  // console.log(items);
   return (
     <div className="gallery-page">
       <div className="galleries">

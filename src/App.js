@@ -22,7 +22,6 @@ function App() {
     console.log(languageStoredInLocalStorage);
   };
   const images = { firstGalleryimg, secondGalleryimg, thirdGalleryimg };
-
   return (
     <Router>
       <div className="App">

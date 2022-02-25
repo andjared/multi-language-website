@@ -37,7 +37,6 @@ const ContactUs = ({ language }) => {
 
   return (
     <div className="contact-us">
-      {/* <h2>Kontaktirajte nas</h2> */}
       {show && <Modal handleShow={handleShow} language={language} />}
       <form ref={form} onSubmit={sendEmail} className="email-form">
         <label>{name[language]}</label>

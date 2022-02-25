@@ -14,7 +14,6 @@ const AboutUs = ({ language }) => {
       </div>
       <div className="bottom-box">
         <p>{translations.clients[language]} </p>
-        {/* <p>Saradjivali smo sa: </p> */}
         {logos.map((logo) => {
           return (
             <img
