@@ -263,10 +263,10 @@ img.one {
   margin-inline: auto;
 }
 .gallery {
-  padding: 20em;
+  width: 30%;
 }
 .gallery h2 {
-  padding-bottom: 1em;
+  margin-block: 1.5em;
   text-align: left;
   text-transform: uppercase;
   /* font-weight: bold; */
@@ -286,10 +286,10 @@ img.one {
   color: rgb(0, 153, 153);
 }
 .concept {
-  margin-top: 6em; /* height: 150vh; */
+  margin-top: 3em;
 }
 .concept p {
-  padding: 1.5em;
+  padding: 1em;
   text-transform: uppercase;
   font-size: var(--big-font);
   font-weight: bold;
@@ -464,11 +464,12 @@ textarea {
   .services .box {
     flex-direction: column;
   }
-  .gallery-page {
-    display: flex;
+  .galleries {
     flex-direction: column;
-    justify-content: center;
-    margin: 15vh;
+    align-items: center;
+  }
+  .gallery {
+    width: 80%;
   }
 
   .concept {
