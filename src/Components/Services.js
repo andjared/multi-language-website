@@ -7,8 +7,6 @@ import imagePlanting from "../assets/images/plantingplans/9.jpg";
 import { translations } from "../translations";
 
 const Services = ({ language }) => {
-  // destructuring chapters content from translations object
-
   const { first, second, third, fourth } = translations.services.chapters;
   const { title } = translations.services;
   const { buttonTitle } = translations.services;
@@ -17,15 +15,12 @@ const Services = ({ language }) => {
   const [readMoreSecond, setReadMoreSecond] = useState(true);
   const [readMoreThird, setReadMoreThird] = useState(true);
 
-  //change readMore state for each chapter onclik individually
   const handleReadMore = (readMore, setReadMore) => {
     setReadMore(!readMore);
   };
 
   return (
     <div className="services">
-      {/* first chapter */}
-
       <div className="box">
         <div className="text-box">
           <h2>{title.first[language]}</h2>
@@ -47,9 +42,6 @@ const Services = ({ language }) => {
           <img src={imageModelovanje} alt="3D" />
         </div>
       </div>
-
-      {/*  second Chapter */}
-
       <div className="box">
         <div className="img-box">
           <img src={imageProjektovanje} alt="3D" />
@@ -73,9 +65,6 @@ const Services = ({ language }) => {
           />
         </div>
       </div>
-
-      {/* third chapter */}
-
       <div className="box">
         <div className="text-box">
           <h2>{title.third[language]}</h2>

@@ -1,15 +1,15 @@
 import { useState, useRef } from "react";
 import Modal from "./Modal";
-
 import { translations } from "../translations";
 import emailjs from "emailjs-com";
 import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import MyMap from "./MyMap";
 const ContactUs = ({ language }) => {
   // modal settings
-  const [show, setShow] = useState(false);
-  const handleShow = () => {
-    setShow(false);
+  const [showModal, setShowModal] = useState(false);
+  const [messageSuccess, setMessageSuccess] = useState(true);
+  const handleModal = () => {
+    setShowModal(false);
   };
   const { name, email, subject, message, button } = translations.form;
   /////////// CONTACT FORM EMAIL.JS  /////////////////////
@@ -25,11 +25,10 @@ const ContactUs = ({ language }) => {
       )
       .then(
         (result) => {
-          setShow(true);
-          console.log(result.text);
+          setShowModal(true);
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          setMessageSuccess(false);
         }
       );
     e.target.reset();
@@ -37,7 +36,13 @@ const ContactUs = ({ language }) => {
 
   return (
     <div className="contact-us">
-      {show && <Modal handleShow={handleShow} language={language} />}
+      {showModal && (
+        <Modal
+          handleModal={handleModal}
+          language={language}
+          successMessage={messageSuccess}
+        />
+      )}
       <form ref={form} onSubmit={sendEmail} className="email-form">
         <label>{name[language]}</label>
         <input type="text" name="name" required />

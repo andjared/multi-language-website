@@ -1,15 +1,13 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
-@font-face {
-  font-family: comicSans;
-  src: url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: var(--fonts);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 *,
 ::after,
@@ -24,9 +22,7 @@ body {
   --big-font: 1.2em;
   --small-font: 1em;
 }
-/* p{
-  font-size: 22px;
-} */
+
 .home {
   height: 100vh;
   width: 100vw;
@@ -34,13 +30,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: Maiandra;
 }
 .nav-bar,
 .footer {
   background: var(--bg-dark);
-  /* height: fit-content; */
-  /* min-height: 3.5rem; */
   width: 100%;
   z-index: 1;
   padding: 1em;
@@ -114,7 +107,6 @@ body {
 }
 .footer p {
   font-size: var(--big-font);
-  /* padding: 15px; */
   text-transform: uppercase;
   text-align: center;
   color: var(--links-color);
@@ -139,7 +131,6 @@ body {
   padding: 5em;
 }
 .top-box {
-  /* margin: 2em auto; */
   display: flex;
   justify-content: space-around;
   max-width: 90%;
@@ -159,7 +150,6 @@ body {
   line-height: 1.5em;
   text-indent: 3em;
   text-align: justify;
-  /* text-shadow: 2px 2px 4px #8f8f8f; */
 }
 .about-us-text {
   animation: transitionIn 2s;
@@ -172,7 +162,6 @@ body {
 
 .bottom-box img {
   align-self: center;
-  /* margin-bottom: 10vh; */
   margin: 1rem;
   width: 4rem;
   flex-basis: auto;
@@ -194,7 +183,6 @@ img.one {
 }
 
 .services .box {
-  /* border: 1px solid olive; */
   padding: 2em;
   display: flex;
 }
@@ -205,7 +193,6 @@ img.one {
 .text-box {
   padding: 2em;
   white-space: pre-wrap;
-  /* text-align: justify; */
 }
 .img-box {
   padding: 3em;
@@ -217,7 +204,6 @@ img.one {
 }
 
 .text-box p {
-  /* text-indent: 2.5em; */
   line-height: 1.5rem;
   font-size: var(--big-font);
   text-align: justify;
@@ -228,7 +214,6 @@ img.one {
   color: rgb(100, 0, 0);
 }
 .services .button {
-  /* color: rgb(221, 97, 97); */
   color: var(--btn-bg-color);
   background: var(--links-color);
   opacity: 90%;
@@ -243,9 +228,7 @@ img.one {
   cursor: pointer;
   text-shadow: 2px 2px 5px #2a08082d;
 }
-/* .services .button:focus {
-  outline: none;
-} */
+
 .services .button:active {
   color: var(--links-color);
   background: var(--btn-bg-color);
@@ -258,8 +241,9 @@ img.one {
 .galleries {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin-top: 18vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
   margin-inline: auto;
 }
 .gallery {
@@ -269,7 +253,6 @@ img.one {
   margin-block: 1.5em;
   text-align: left;
   text-transform: uppercase;
-  /* font-weight: bold; */
   color: var(--bg-dark);
 }
 
@@ -311,9 +294,6 @@ img.one {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* display: flex;
-
-  justify-content: space-around; */
 }
 .email-form {
   position: relative;
@@ -357,7 +337,6 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* margin: 0 auto; */
 }
 .icons {
   display: flex;
@@ -369,8 +348,6 @@ textarea {
   padding-top: 2em;
 }
 .icons i {
-  /* display: block; */
-  /* margin: 1em; */
   font-size: x-large;
   padding-right: 0.5em;
 }
@@ -389,8 +366,6 @@ textarea {
   background-color: var(--bg-dark);
   margin-inline: auto;
   color: var(--bg-dark);
-  /* right: 0%;
-  bottom: 0; */
   z-index: 1;
 }
 .modal-content {
@@ -401,7 +376,6 @@ textarea {
 .modal-header,
 .modal-footer {
   padding: 2em;
-  /* font-weight: bolder; */
 }
 .modal-title {
   margin: 0;

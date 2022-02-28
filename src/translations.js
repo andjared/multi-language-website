@@ -159,7 +159,7 @@ For modeling, we use a Site plan or sketches with basic measurements and photos 
     failed: {
       header: {
         serbian: "Poruka nije poslata.",
-        english: "Message wasn't successfully.",
+        english: "Message wasn't sent.",
       },
       content: {
         serbian: "Pokusajte ponovo.",
