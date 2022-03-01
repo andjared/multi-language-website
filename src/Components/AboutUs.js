@@ -13,7 +13,9 @@ const AboutUs = ({ language }) => {
         </div>
       </div>
       <div className="bottom-box">
-        <p>{translations.clients[language]} </p>
+        <div className="text">
+          <p>{translations.clients[language]} </p>
+        </div>
         {logos.map((logo) => {
           return (
             <img

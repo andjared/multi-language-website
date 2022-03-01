@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 *,
 ::after,
@@ -79,9 +78,12 @@ body {
 .lang {
   color: var(--links-color);
 }
-
+.lang i {
+  display: inline-block;
+  padding-top: 0.35em;
+}
 .lang select {
-  margin: 0.8em;
+  margin-left: 0.8em;
   color: var(--links-color);
   background-color: var(--bg-dark);
 }
@@ -144,7 +146,7 @@ body {
   justify-content: center;
   margin-top: 3.5em;
 }
-.about-us p {
+.about-us-text p {
   font-size: 2vh;
   font-style: italic;
   line-height: 1.5em;
@@ -239,37 +241,47 @@ img.one {
   text-align: center;
 }
 .galleries {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 20vh;
   margin-inline: auto;
 }
 .gallery {
   width: 30%;
+  height: 30%;
+  margin: 1em;
 }
 .gallery h2 {
-  margin-block: 1.5em;
+  margin-bottom: 1.5em;
   text-align: left;
   text-transform: uppercase;
   color: var(--bg-dark);
 }
-
+.image-gallery-slide-wrapper {
+  height: 30%;
+}
+.image-gallery-thumbnails {
+  height: 5em;
+  margin-top: 2em;
+}
 .image-gallery-icon {
   color: var(--links-color);
 }
 .image-gallery-index {
   color: var(--links-color);
   font-weight: bold;
-  z-index: 4;
+  z-index: 1;
 }
+
+.concept {
+  margin-top: 1em;
+}
+
 #downArrow {
   font-size: clamp(1.8em, 2.5rem, 2rem);
   color: rgb(0, 153, 153);
-}
-.concept {
-  margin-top: 3em;
 }
 .concept p {
   padding: 1em;
@@ -419,7 +431,7 @@ textarea {
   }
   .about-us .top-box {
     flex-direction: column;
-    margin-top: 12vh;
+    margin-top: 15vh;
   }
   .about-us-text {
     max-width: 80%;
@@ -429,8 +441,11 @@ textarea {
     font-size: var(--small-font);
   }
 
-  .bottom-box {
-    margin-inline: auto;
+  .bottom-box .text {
+    text-align: center;
+  }
+  .bottom-box img {
+    margin: 0;
   }
   .services {
     margin-top: 4rem;
