@@ -259,6 +259,9 @@ img.one {
 .image-gallery-image {
   height: 20rem;
 }
+.fullscreen .image-gallery-image {
+  height: 80vh;
+}
 .image-gallery-thumbnails {
   margin-top: 2em;
 }
