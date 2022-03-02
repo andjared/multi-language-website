@@ -24,7 +24,7 @@ const ContactUs = ({ language }) => {
         "user_9qqtok280efSdKKxVi3aV"
       )
       .then(
-        (result) => {
+        () => {
           setShowModal(true);
         },
         () => {

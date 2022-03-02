@@ -61,7 +61,6 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
                   <FaBehanceSquare />
                 </a>
               </i>
@@ -73,7 +72,6 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
                   <FaLinkedin />
                 </a>
               </i>
@@ -85,7 +83,6 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
                   <FaInstagram />
                 </a>
               </i>
