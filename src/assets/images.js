@@ -58,6 +58,6 @@ const images = {
   fiftyeight: require("./images/plantingplans/7.jpg").default,
   fiftynine: require("./images/plantingplans/8.jpg").default,
   sixty: require("./images/plantingplans/9.jpg").default,
-  sixtyone: require("./images/plantingplans/4.jpg").default,
+  sixtyone: require("./images/plantingplans/10.jpg").default,
 };
 export default images;

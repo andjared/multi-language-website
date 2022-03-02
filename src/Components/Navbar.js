@@ -8,7 +8,7 @@ import {
   FaYoutube,
   FaBars,
 } from "react-icons/fa";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Navbar = ({ language, handleChangeLanguage }) => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);

@@ -16,10 +16,12 @@ function App() {
   const [language, setLanguage] = useState(
     languageStoredInLocalStorage || "serbian"
   );
+  function storeLanguageInLocalStorage(language) {
+    localStorage.setItem("language", language);
+  }
   const changeLanguage = (language) => {
     setLanguage(language);
     storeLanguageInLocalStorage(language);
-    console.log(languageStoredInLocalStorage);
   };
   const images = { firstGalleryimg, secondGalleryimg, thirdGalleryimg };
   return (
@@ -47,10 +49,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function storeLanguageInLocalStorage(language) {
-  localStorage.setItem("language", language);
 }
 
 export default App;
