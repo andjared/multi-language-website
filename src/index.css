@@ -460,7 +460,10 @@ textarea {
   .gallery {
     width: 80%;
   }
-
+  .image-gallery-content {
+    object-fit: none;
+    margin: 0 auto;
+  }
   .concept {
     margin-top: 0;
     padding: 0;
