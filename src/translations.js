@@ -26,18 +26,22 @@ export const translations = {
     english: "Landscape architecture and 3D visualizations",
   },
   aboutUs: {
-    serbian: `Bašta i svašta je umetničko-inženjerski studio specijalizovan za izradu 3D vizualizacija i pejzažnu arhitekturu.
-            Znanje i veštine kojima raspolažemo su posledica višegodišnjeg praktičnog i naučnog rada u oblasti eksterijera.
-            Istražujući elemente prostora koji oblikuju "duh mesta", dajući mu jedinstven karakter kao principe dizajna formirali
-            smo jedinstven pristup u dizajnu prirodom. Cilj nam nije komercijalnost i stvaranje uniformnih prostora, već kreiranje zelenih
-            površina prema potrebama i senzibilitetu korinika.Ovim principima se vodimo i prilikom kreiranja 3D vizualizacija i time
-            nastojimo preneti apstraktne karakteristike prostora.`,
-    english: `Land Essence is art engineering studio specializing in Landscape architecture and creating 3D visualizations. Our goal is not to create
-     uniformed and burning spaces, but to create beautiful spaces according to clients needs and sensibility. Our knowledge and skills are based on many
-      years of practice and scientific experience in researching what is of the spiritual essence in the connection between humans and the environment that
-     he using. We trying to find invisible elements that form "the spirit of place" and that create the character of the place. So, we endeavor to use those
-      elements in our design. We want to present your story through a design and help you to show your own essence. Our goal is also to create unique, pleasant,
-     and functional landscapes.
+    serbian: `Land Essence je umetničko – inženjerski studio specijalizovan za Pejzažnu arhitekturu i izradu 3D vizualizacija. 
+        Cilj nam nije komercijalnost i stvaranje uniformnih prostora, već kreiranje prema potrebama i senzibilitetu klijenta.
+        Znanje i veštine kojima raspolažemo su zasnovane na praktičnom i naučnom istraživanju prostora kao takvog, kao i njegove uzajamne veze sa čovekom. 
+        Vodimo se hipotezom da svaki prostor u većoj ili manjoj meri ima izražen "genius loci", odnosno duh mesta. To znači da naš licni doživljaj zavisi od mnogo faktora
+        koji nisu uvek samo fizički, opipljivi, već i oni kojih uglavnom nismo svesni (npr. kompozicija prostora utiče na osecaj balansa, dinamike, ritmicnosti, ušuškanosti 
+        ili izloženosti…). Njegovo emocionalno nasleđe je usko povezano sa istorijskim nasleđem, ali i sa karakterom šireg okruženja u kome se nalazi, što 
+        je takođe važan faktor našeg doživljaja. Naš zadatak je da u polaznoj fazi otkrijemo da li prostor pred nama ima izražen "genius loci", ili je potpuno prazan list papira 
+        na kome treba da ispišemo novu priču. Ukoliko su u pitanju prostori koje je potrebno rekonstruisati ili redizajnirati, polazna tačka u procesu oblikovanja jeste pronalazak 
+        postojećih elemenata ili faktora prostora koji ga cine jedinstvenim, a zatim ih upotrebiti kao osnovu za dizajnerski proces. 
+        Ukoliko su u pitanju novi prostori bez specifičnog karaktera nastojimo u odnosu na njihovu buduću namenu otkriti kakav bi oni utisak trebalo ostaviti na korisnika.
+        Na osnovu toga osmislicemo priču i preneti je kroz dizajn.`,
+    english: `Land Essence is an art — engineering studio specializing in Landscape architecture and creating 3D visualizations.
+Our goal is not to create uniform and boring spaces, but to create beautiful spaces according to clients’ needs and sensibility.
+Our knowledge and skills are based on practice and scientific in research of the space as such as well as its connection to the humans. We are guided by the hypothesis that every space has a pronounced "genius loci", the spirit of the place. This means that our personal experience depends on many factors that are not always only physical, tangible but also those factors of which we are mostly unaware (for example. the composition of the space affects the sense of balance, dynamics, rhythm, etc.). 
+In the initial phase, our task is to find out whether the space has a pronounced genius loci or if it is a completely blank sheet of paper on which we need to write a new story. If we design spaces that need to be reconstructed or redesigned, the starting point in the design process is to find existing elements or factors of space that make it unique and then use them as a basis for the design process.
+If we design new spaces without a specific character, we try to find out what impression they should leave on the user in relation to their future purpose. Based on that, we will create a story and convey it through design.
 `,
   },
   clients: {
@@ -55,7 +59,7 @@ export const translations = {
         english: "Landscape master plan",
       },
       third: {
-        serbian: "Kreiranje konceptualnog idejnog resenja",
+        serbian: "Kreiranje konceptualnog idejnog resenja - brendiranje",
         english: "Creating a concept of design-landscape branding",
       },
       fourth: {
@@ -68,26 +72,32 @@ export const translations = {
         serbian: `U ponudi je 3 stila renderovanja:
 >> Realisticni stil je tehnicki najprecizniji i najpouzdanije prikazuje proporcije prostora, materijale, izbor biljnih vrsta, nivelaciju terena.
 >> Visoko realisticni stil rendera najbolje prikazuje ,"atmosferu u prostoru" zahvaljujuci mogucnostima softvera da se manipulise vremenskim prilikama, svetlosnim i drugim efektima.
->> Umetnicki stil je vrlo interesantan stil u vidu efekta rucnog crtanja. Modelovanje se takodje vrsi uz pomoc kompjuterskog softvera. Pruzamo uslugu modelovanja gradjevinskih objekata, eksterijera i svih pratecih elemenata kao sto su zastori, vodene povrsine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Modelovanje se vrsi na osnovu 2D planova ili skica sa merama i fotografija. Krajnji proizvod koji Vam isporucujemo su 3D renderi i 3D animacije. `,
+>> Umetnicki stil je vrlo interesantan stil u vidu efekta rucnog crtanja. Modelovanje se takodje vrsi uz pomoc kompjuterskog softvera. 
+Pruzamo uslugu modelovanja gradjevinskih objekata, eksterijera i svih pratecih elemenata kao sto su zastori, vodene povrsine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Modelovanje se vrsi na osnovu 2D planova ili skica sa merama i fotografija. Krajnji proizvod koji Vam isporucujemo su 3D renderi i 3D animacije. `,
         english: `We offer 3 renderings styles:
->>Realistic style is technically more precise and dependable shows area proportions, material textures, plant species, terrain.
+>> Realistic style is technically more precise and dependable shows area proportions, material textures, plant species, terrain.
 >> High realistic style renderings are great for "area life atmosphere". The 3D software ability enables to manipulate with lights effect, weather and other effect and that make space alive. 
->> Art style is the best for art lovers. We are creating digital hand – drawn renderings. We are creating 3D models of buildings, exteriors with all elements such as hardscapes, xeriscapes, patios, covered patios, pergolas, pools and spa, fountains, greenery, green walls, etc.
-For modeling, we use a Site plan or sketches with basic measurements and photos of the area. We will provide you with 3D renderings and a 3D walkthrough.`,
+>> Art style is the best for art lovers. We are creating digital hand – drawn renderings. 
+We create a 3D models of buildings, exteriors with all elements such as hardscapes, xeriscapes, patios, covered patios, pergolas, pools and spas, fountains, greenery, green walls, etc.
+For modeling, we use a Site plan or sketches with basic measurements and photos of the area.
+We provide you with 3D renderings and a 3D walkthrough.`,
       },
       second: {
-        serbian: `Izrada idejnog resenja eksterijera kao i svih pratecih elemenata kao sto su zastori, vodene povrsine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Nas pristup je umetnicko inzenjerski sto rezultira kreiranju jedinstvenih, funkcionalnih prostora. Krajnji proizvod je Kompozicioni plan – 2D PLAN na kome je prikazan dizajn u celosti, izbor materijala sa tekstualnim objasnjenjem i pratecim fotografijama koje su posluzile kao inspiracija. Po potrebi izradjujemo preseke i specificne detalje.`,
-        english: `We are creating a landscape design for your property. That includes the whole yard with all elements such as hardscapes, xeriscapes, patios, covered patios, pergolas, pools and spa, fountains, greenery, green walls, etc. We are using an artistic-engineering approach, and we are trying to make unique and functional spaces. We will provide you with a 2D Master plan which represents the whole landscape design, materials with notes, and inspiration photos. If you need, you will get Sections and additional drawings of details.`,
+        serbian: `Izrada idejnog rešenja eksterijera kao i svih pratećih elemenata kao što su zastori, vodene površine i elementi sa vodom, vrtno arhitektonski elementi i zelenilo. Naš pristup je umetnicko inženjerski što rezultira kreiranju jedinstvenih, funkcionalnih prostora. Krajnji proizvod je Kompozicioni plan — 2D PLAN na kome je prikazan dizajn u celosti, izbor materijala sa tekstualnim objašnjenjem i pratećim fotografijama koje su poslužile kao inspiracija. Po potrebi izrađujemo preseke i razrađujemo specifične detalje.`,
+        english: `We create landscape designs for your property. That includes the whole yard with all the elements such as hardscapes, xeriscapes, patios, covered patios, pergolas, pools and spas, fountains, greenery, green walls, etc. We are using an artistic-engineering approach in order to create unique and functional spaces. We provide a 2D Master plan which represents the whole landscape design, materials with notes, and inspiration photos, If needed sections and additional drawings of details.`,
       },
 
       third: {
-        serbian: `Razvijanje konceptualnog idejnog rešenja je proces u kome Vam pomažemo da kroz dizajn ispričate Vašu priču. Ova usluga je najpre namenjena prostorima čija je uloga da na posetioce ostave utisak. Da bi to bilo moguće, neophodno je obaviti istraživanje na osnovu kog će se definisati postojeći ili budući karakter prostora, njegov "genius loci’", odnosno duh mesta. Ukoliko imate izgrađen brend, konceptualnim dizajnom ćemo ga učiniti čitljivim. Krajnji proizvod je set skica i crteža sa pratećim fotografijama i beleškama koje prikazuju konceptualnu, polaznu dizajnersku ideju. `,
-        english: `We are developing a conceptual ideas solution that helps you to show your story. This service is the best for spaces that are important to impress their users. For that reason, we need to do research reaching which help us to define existing or new character of space, their,, genius loci’’, or spirit of place. If you have your own brand, this service is good to implement that in your exterior. We will provide you with sketches, drawings, photos, notes which explain the conceptual idea as a start point for the new design.
-    `,
+        serbian: `Razvijanje konceptualnog idejnog rešenja je proces u kome Vam pomažemo da kroz dizajn ispričate Vašu priču. Ova usluga je najpre namenjena prostorima čija je uloga da na posetioce ostave utisak. Da bi to bilo moguće, neophodno je obaviti istraživanje na osnovu kog će se definisati postojeći ili budući karakter prostora, njegov “genius loci”, odnosno duh mesta. 
+Ukoliko imate izgrađen brend, konceptualnim dizajnom ćemo ga učiniti čitljivim. Krajnji proizvod je set skica i crteža sa pratećim fotografijama i beleškama koje prikazuju konceptualnu, polaznu dizajnersku ideju.  `,
+        english: `We develop conceptual idea solutions that help you to tell your story. This service is intended for spaces whose purpose is to impress the visitors. For that reason, we conduct research which helps us to define the existing or a new character of the space, its “genius loci”, or the spirit of the place.
+If you have your own brand, this service makes it possible or helps to implement it in your exterior. We will provide you with sketches, drawings, photos and notes which explain the conceptual idea as a start point for the new design.`,
       },
       fourth: {
-        serbian: `Pružamo uslugu kreiranja plana sadnje. Krajnji proizvod je 2D plan sa obeleženim mestima za sadnju biljaka, njihov spisak i fotografije. Odabraćemo kombinaciju biljaka koje su najpogodnije za uslove sredine u kojima će rasti i upotpuniti vizuelni efekat prostora.  `,
-        english: `We are creating Planting plans for all Plant Hardiness zones. You will receive a plants species list marked on a 2D plan and their photos. We will choose the best plants combinations that are the best for conditions where they will grow and looks pretty.`,
+        serbian: `Pružamo uslugu kreiranja plana sadnje. Krajnji proizvod je 2D plan sa obeleženim mestima za sadnju biljaka, njihov spisak i fotografije. 
+Odabraćemo kombinaciju biljaka koje su najpogodnije za uslove sredine u kojima će rasti i upotpuniti vizuelni efekat prostora. `,
+        english: `We create planting plans for all Plant Hardiness zones. The end result is a 2D plan with a plants species list and their photos with marked spots where to plant them. 
+We make a selection of the best plant combinations for your growth conditions that enhance the visual effect of the space.`,
       },
     },
     buttonTitle: {

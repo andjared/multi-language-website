@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { translations } from "../translations";
+import logo from "../assets/images/logo.png";
+
 import {
   FaGlobe,
   FaInstagram,
@@ -18,6 +20,12 @@ const Navbar = ({ language, handleChangeLanguage }) => {
   };
   return (
     <nav className="nav-bar">
+      <div className="logo">
+        <i>
+          <img src={logo} alt="" />
+        </i>
+      </div>
+
       <div className="lang">
         <i>
           <FaGlobe />
