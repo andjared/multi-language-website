@@ -54,7 +54,7 @@ body {
 }
 .logo {
   position: relative;
-  left: -23vw;
+  left: -22vw;
 }
 .logo img {
   position: absolute;
@@ -79,7 +79,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: var(--big-font);
-  padding: 1.3em;
+  padding: 1.1em;
   color: var(--links-color);
 }
 .nav-links li:hover {
@@ -144,7 +144,7 @@ body {
   justify-content: space-around;
   max-width: 100%;
   margin-inline: auto;
-  margin-top: 1.5em;
+  margin-top: 2.5em;
   align-items: center;
 }
 .bottom-box {
@@ -417,7 +417,8 @@ textarea {
 
 @media screen and (max-width: 1200px) {
   .logo {
-    left: -10vw;
+    left: -7vw;
+    top: 2vh;
   }
   .logo img {
     width: 4em;
@@ -429,7 +430,7 @@ textarea {
   }
   .nav-links li a {
     font-size: var(--small-font);
-    padding: 1.4em;
+    padding: 1em;
   }
   .lang select {
     margin: 0.5em;
@@ -455,7 +456,9 @@ textarea {
     line-height: 1.8em;
     font-size: var(--small-font);
   }
-
+  .bottom-box {
+    margin-bottom: 2em;
+  }
   .bottom-box .text {
     text-align: center;
   }
@@ -493,6 +496,9 @@ textarea {
     padding: 0;
     margin: 0;
   }
+  .map {
+    z-index: 0;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -502,9 +508,12 @@ textarea {
     color: var(--links-color);
     margin-top: 0.5em;
   }
-  .logo img {
-    top: 3.5em;
-    left: 25em;
+  .logo {
+    top: 8vh;
+    left: 70vw;
+  }
+  .log img {
+    padding: 2vh;
   }
   .nav-bar {
     height: fit-content;
@@ -512,7 +521,12 @@ textarea {
     justify-content: space-around;
     align-items: flex-start;
   }
-
+  .bottom-box img {
+    width: 3rem;
+  }
+  .bottom-box img.one {
+    width: 6rem;
+  }
   .closed {
     display: none;
   }
@@ -533,10 +547,6 @@ textarea {
 
   .open .social-links li {
     padding: 0.5em;
-  }
-
-  .bottom-box {
-    margin: 10vh;
   }
 
   .contact-us {

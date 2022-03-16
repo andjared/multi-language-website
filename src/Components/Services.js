@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
-import imageModelovanje from "../assets/images/modelovanje.jpg";
-import imageProjektovanje from "../assets/images/projektovanje.jpg";
-import imageIzvodjenje from "../assets/images/landscape.jpeg";
-import imagePlanting from "../assets/images/plantingplans/9.jpg";
+import imageModeling from "../assets/images/modelovanje.jpg";
+import imageProjecting from "../assets/images/masterplan.jpg";
+import imageBrending from "../assets/images/brending.jpg";
+import imagePlanting from "../assets/images/plantingplan.jpg";
 import { translations } from "../translations";
 
 const Services = ({ language }) => {
@@ -39,12 +39,12 @@ const Services = ({ language }) => {
           />
         </div>
         <div className="img-box">
-          <img src={imageModelovanje} alt="3D" />
+          <img src={imageModeling} alt="3Dmodeling" />
         </div>
       </div>
       <div className="box">
         <div className="img-box">
-          <img src={imageProjektovanje} alt="3D" />
+          <img src={imageProjecting} alt="landscapeProjecting" />
         </div>
         <div className="text-box">
           <h2>{title.second[language]}</h2>
@@ -83,12 +83,12 @@ const Services = ({ language }) => {
           />
         </div>
         <div className="img-box">
-          <img src={imageIzvodjenje} alt="3D" />
+          <img src={imageBrending} alt="landscapeBrending" />
         </div>
       </div>
       <div className="box">
         <div className="img-box">
-          <img src={imagePlanting} alt="3D" />
+          <img src={imagePlanting} alt="plantingPlan" />
         </div>
         <div className="text-box">
           <h2>{title.fourth[language]}</h2>
