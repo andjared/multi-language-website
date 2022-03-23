@@ -1,7 +1,9 @@
 import { translations } from "../../src/translations";
+import { useLanguage } from "./LanguageContext";
 import imageProject from "../assets/images/aboutus2.jpg";
 import logos from "../assets/logos";
-const AboutUs = ({ language }) => {
+const AboutUs = () => {
+  const language = useLanguage();
   return (
     <div className="about-us">
       <div className="top-box">

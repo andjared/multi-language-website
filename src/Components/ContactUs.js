@@ -1,10 +1,13 @@
 import { useState, useRef } from "react";
+import { useLanguage } from "./LanguageContext";
 import Modal from "./Modal";
 import { translations } from "../translations";
 import emailjs from "emailjs-com";
 import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import MyMap from "./MyMap";
-const ContactUs = ({ language }) => {
+const ContactUs = () => {
+  const language = useLanguage();
+
   // modal settings
   const [showModal, setShowModal] = useState(false);
   const [messageSuccess, setMessageSuccess] = useState(true);

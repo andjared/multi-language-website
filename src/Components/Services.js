@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "./LanguageContext";
 import Button from "./Button";
 import imageModeling from "../assets/images/modelovanje.jpg";
 import imageProjecting from "../assets/images/masterplan.jpg";
@@ -6,7 +7,9 @@ import imageBrending from "../assets/images/brending.jpg";
 import imagePlanting from "../assets/images/plantingplan.jpg";
 import { translations } from "../translations";
 
-const Services = ({ language }) => {
+const Services = () => {
+  const language = useLanguage();
+
   const { first, second, third, fourth } = translations.services.chapters;
   const { title } = translations.services;
   const { buttonTitle } = translations.services;

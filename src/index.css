@@ -548,6 +548,12 @@ textarea {
   .open .social-links li {
     padding: 0.5em;
   }
+  .img-box {
+    padding: 1em;
+  }
+  .gallery h2 {
+    margin: 0.5em;
+  }
 
   .contact-us {
     margin-top: 18vh;

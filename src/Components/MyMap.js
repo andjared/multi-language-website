@@ -24,7 +24,7 @@ const MyMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={position} icon={focusIcon}>
-          <Popup>Basta i svasta</Popup>
+          <Popup>Land Essence</Popup>
         </Marker>
       </MapContainer>
     </div>

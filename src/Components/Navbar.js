@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { translations } from "../translations";
 import logo from "../assets/images/logo.png";
-
+import { useLanguage, useUpdateLanguage } from "./LanguageContext";
 import {
   FaGlobe,
   FaInstagram,
@@ -12,7 +12,9 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 
-const Navbar = ({ language, handleChangeLanguage }) => {
+const Navbar = () => {
+  const language = useLanguage();
+  const handleChangeLanguage = useUpdateLanguage();
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
   const handleHamburgerMenu = () => {
