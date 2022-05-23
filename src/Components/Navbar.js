@@ -89,7 +89,7 @@ const Navbar = () => {
             <li>
               <i>
                 <a
-                  href="https://www.instagram.com/bastaisvasta/?hl=sr"
+                  href="https://www.instagram.com/landessence/"
                   target="_blank"
                   rel="noreferrer"
                 >

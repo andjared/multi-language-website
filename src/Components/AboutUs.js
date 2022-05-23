@@ -1,6 +1,6 @@
 import { translations } from "../../src/translations";
 import { useLanguage } from "./LanguageContext";
-import imageProject from "../assets/images/aboutus2.jpg";
+import imageProject from "../assets/images/aboutus.jpg";
 import logos from "../assets/logos";
 const AboutUs = () => {
   const language = useLanguage();
