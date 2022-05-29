@@ -17,6 +17,7 @@ const Navbar = () => {
   const handleChangeLanguage = useUpdateLanguage();
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
+
   const handleHamburgerMenu = () => {
     setHamburgerMenu(!hamburgerMenu);
   };

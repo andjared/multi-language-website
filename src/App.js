@@ -10,6 +10,7 @@ import firstGalleryimg from "./assets/firstGalleryimg";
 import secondGalleryimg from "./assets/secondGalleryimg";
 import thirdGalleryimg from "./assets/thirdGalleryimg";
 import { LanguageProvider } from "./Components/LanguageContext";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const images = { firstGalleryimg, secondGalleryimg, thirdGalleryimg };
@@ -17,6 +18,7 @@ function App() {
     <LanguageProvider>
       <div className="App">
         <Router>
+          <ScrollToTop />
           <Navbar />
           <Switch>
             <Route exact path="/">

@@ -29,7 +29,7 @@ const Services = () => {
           <h2>{title.first[language]}</h2>
           <p>
             {readMoreFirst
-              ? first[language].substring(0, 435) + " (...)"
+              ? first[language].slice(0, 400) + ".."
               : first[language]}
           </p>
           <Button
@@ -53,7 +53,7 @@ const Services = () => {
           <h2>{title.second[language]}</h2>
           <p>
             {readMoreSecond
-              ? second[language].substring(0, 260) + " (...)"
+              ? second[language].slice(0, 400) + "..."
               : second[language]}
           </p>
           <Button
@@ -73,7 +73,7 @@ const Services = () => {
           <h2>{title.third[language]}</h2>
           <p>
             {readMoreThird
-              ? third[language].substring(0, 363) + " (...)"
+              ? third[language].slice(0, 400) + "..."
               : third[language]}
           </p>
           <Button

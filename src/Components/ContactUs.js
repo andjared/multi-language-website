@@ -11,6 +11,7 @@ const ContactUs = () => {
   // modal settings
   const [showModal, setShowModal] = useState(false);
   const [messageSuccess, setMessageSuccess] = useState(true);
+
   const handleModal = () => {
     setShowModal(false);
   };

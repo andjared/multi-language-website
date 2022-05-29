@@ -147,36 +147,45 @@ body {
   margin-top: 2.5em;
   align-items: center;
 }
-.bottom-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3.5em;
+.top-box img {
+  margin-top: 6vh;
+  max-width: 100%;
 }
-.about-us-text p {
+.about-us p {
   font-size: 1.7vh;
   font-style: italic;
   line-height: 1.5em;
   text-indent: 3em;
   text-align: justify;
 }
+
 .about-us-text {
   animation: transitionIn 2s;
   max-width: 40%;
 }
-.top-box img {
-  margin-top: 6vh;
-  max-width: 100%;
+.bottom-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+.bottom-box p {
+font-style: italic;
+}
+.logos {
+  display: flex;
+  align-items: center;
 }
 
-.bottom-box img {
+.logos img {
   align-self: center;
   margin: 1rem;
   width: 4rem;
   flex-basis: auto;
+  padding: 1em;
 }
 img.one {
-  background-color: blue;
   width: 8rem;
 }
 
@@ -318,7 +327,7 @@ img.one {
 }
 .email-form {
   position: relative;
-  width: 35%;
+ min-width: 35%;
   padding: 2.5em;
   display: flex;
   flex-direction: column;
@@ -332,11 +341,15 @@ img.one {
   color: var(--links-color);
   margin-block: 0.5em;
   padding: 0.7em;
+    max-width: 60%;
 }
+ /* .email-form input {
+   max-width: 40%;
+ } */
 .email-form label {
   padding-block: 0.5em;
 }
-.btn {
+ .btn {
   background-color: var(--bg-dark);
   opacity: 90%;
   font-weight: bold;
@@ -393,6 +406,7 @@ textarea {
   margin: 2em;
   width: 60%;
   background-color: rgb(209, 204, 204);
+  text-align: justify;
 }
 .modal-header,
 .modal-footer {
@@ -410,9 +424,9 @@ textarea {
   font-size: 1.3em;
 }
 .map {
-  height: 30em;
-  width: 30em;
-  margin-top: 2rem;
+  height: 40em;
+  width: 40em;
+  margin: 4rem 2rem 0 2rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -548,6 +562,12 @@ textarea {
   .open .social-links li {
     padding: 0.5em;
   }
+  .logos {
+    /* flex-direction: column; */
+  }
+  .services{
+    width: 100%;
+  }
   .img-box {
     padding: 1em;
   }
@@ -556,14 +576,23 @@ textarea {
   }
 
   .contact-us {
-    margin-top: 18vh;
+    /* margin-top: 18vh; */
     flex-direction: column;
   }
+  .map{
+    height: 40em;
+    width: 40em;
+  }
   .email-form {
-    width: 60%;
+    min-width: 60%;
     padding: 1.5em;
   }
-  .map {
-    z-index: 0;
+ 
+  .modal{
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
+
 }

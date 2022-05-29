@@ -27,22 +27,22 @@ export const translations = {
   },
   aboutUs: {
     serbian: `Land Essence je umetničko – inženjerski studio specijalizovan za Pejzažnu arhitekturu i izradu 3D vizualizacija. 
-        Cilj nam nije komercijalnost i stvaranje uniformnih prostora, već kreiranje prema potrebama i senzibilitetu klijenta.
-        Znanje i veštine kojima raspolažemo su zasnovane na praktičnom i naučnom istraživanju prostora kao takvog, kao i njegove uzajamne veze sa čovekom. 
-        Vodimo se hipotezom da svaki prostor u većoj ili manjoj meri ima izražen "genius loci", odnosno duh mesta. To znači da naš licni doživljaj zavisi od mnogo faktora
-        koji nisu uvek samo fizički, opipljivi, već i oni kojih uglavnom nismo svesni (npr. kompozicija prostora utiče na osecaj balansa, dinamike, ritmicnosti, ušuškanosti 
-        ili izloženosti…). Njegovo emocionalno nasleđe je usko povezano sa istorijskim nasleđem, ali i sa karakterom šireg okruženja u kome se nalazi, što 
-        je takođe važan faktor našeg doživljaja. Naš zadatak je da u polaznoj fazi otkrijemo da li prostor pred nama ima izražen "genius loci", ili je potpuno prazan list papira 
-        na kome treba da ispišemo novu priču. Ukoliko su u pitanju prostori koje je potrebno rekonstruisati ili redizajnirati, polazna tačka u procesu oblikovanja jeste pronalazak 
-        postojećih elemenata ili faktora prostora koji ga cine jedinstvenim, a zatim ih upotrebiti kao osnovu za dizajnerski proces. 
-        Ukoliko su u pitanju novi prostori bez specifičnog karaktera nastojimo u odnosu na njihovu buduću namenu otkriti kakav bi oni utisak trebalo ostaviti na korisnika.
-        Na osnovu toga osmislicemo priču i preneti je kroz dizajn.`,
+              Cilj nam nije komercijalnost i stvaranje uniformnih prostora, već kreiranje prema potrebama i senzibilitetu klijenta.
+              Znanje i veštine kojima raspolažemo su zasnovane na praktičnom i naučnom istraživanju prostora kao takvog, kao i njegove uzajamne veze sa čovekom. 
+              Vodimo se hipotezom da svaki prostor u većoj ili manjoj meri ima izražen "genius loci", odnosno duh mesta. To znači da naš licni doživljaj zavisi od mnogo faktora
+              koji nisu uvek samo fizički, opipljivi, već i oni kojih uglavnom nismo svesni (npr. kompozicija prostora utiče na osecaj balansa, dinamike, ritmicnosti, ušuškanosti 
+              ili izloženosti…). Njegovo emocionalno nasleđe je usko povezano sa istorijskim nasleđem, ali i sa karakterom šireg okruženja u kome se nalazi, što 
+              je takođe važan faktor našeg doživljaja. Naš zadatak je da u polaznoj fazi otkrijemo da li prostor pred nama ima izražen "genius loci", ili je potpuno prazan list papira 
+              na kome treba da ispišemo novu priču. Ukoliko su u pitanju prostori koje je potrebno rekonstruisati ili redizajnirati, polazna tačka u procesu oblikovanja jeste pronalazak 
+              postojećih elemenata ili faktora prostora koji ga cine jedinstvenim, a zatim ih upotrebiti kao osnovu za dizajnerski proces. 
+              Ukoliko su u pitanju novi prostori bez specifičnog karaktera nastojimo u odnosu na njihovu buduću namenu otkriti kakav bi oni utisak trebalo ostaviti na korisnika.
+              Na osnovu toga osmislicemo priču i preneti je kroz dizajn.`,
     english: `Land Essence is an art — engineering studio specializing in Landscape architecture and creating 3D visualizations.
-Our goal is not to create uniform and boring spaces, but to create beautiful spaces according to clients’ needs and sensibility.
-Our knowledge and skills are based on practice and scientific in research of the space as such as well as its connection to the humans. We are guided by the hypothesis that every space has a pronounced "genius loci", the spirit of the place. This means that our personal experience depends on many factors that are not always only physical, tangible but also those factors of which we are mostly unaware (for example. the composition of the space affects the sense of balance, dynamics, rhythm, etc.). 
-In the initial phase, our task is to find out whether the space has a pronounced genius loci or if it is a completely blank sheet of paper on which we need to write a new story. If we design spaces that need to be reconstructed or redesigned, the starting point in the design process is to find existing elements or factors of space that make it unique and then use them as a basis for the design process.
-If we design new spaces without a specific character, we try to find out what impression they should leave on the user in relation to their future purpose. Based on that, we will create a story and convey it through design.
-`,
+              Our goal is not to create uniform and boring spaces, but to create beautiful spaces according to clients’ needs and sensibility.
+              Our knowledge and skills are based on practice and scientific in research of the space as such as well as its connection to the humans. We are guided by the hypothesis that every space has a pronounced "genius loci", the spirit of the place. This means that our personal experience depends on many factors that are not always only physical, tangible but also those factors of which we are mostly unaware (for example. the composition of the space affects the sense of balance, dynamics, rhythm, etc.). 
+              In the initial phase, our task is to find out whether the space has a pronounced genius loci or if it is a completely blank sheet of paper on which we need to write a new story. If we design spaces that need to be reconstructed or redesigned, the starting point in the design process is to find existing elements or factors of space that make it unique and then use them as a basis for the design process.
+              If we design new spaces without a specific character, we try to find out what impression they should leave on the user in relation to their future purpose. Based on that, we will create a story and convey it through design.
+          `,
   },
   clients: {
     serbian: "Saradjivali smo sa: ",
@@ -70,14 +70,15 @@ If we design new spaces without a specific character, we try to find out what im
     chapters: {
       first: {
         serbian: `U ponudi je 3 stila renderovanja:
->> Realisticni stil je tehnicki najprecizniji i najpouzdanije prikazuje proporcije prostora, materijale, izbor biljnih vrsta, nivelaciju terena.
->> Visoko realisticni stil rendera najbolje prikazuje ,"atmosferu u prostoru" zahvaljujuci mogucnostima softvera da se manipulise vremenskim prilikama, svetlosnim i drugim efektima.
->> Umetnicki stil je vrlo interesantan stil u vidu efekta rucnog crtanja. Modelovanje se takodje vrsi uz pomoc kompjuterskog softvera. 
+~ Realisticni stil je tehnicki najprecizniji i najpouzdanije prikazuje proporcije prostora, materijale, izbor biljnih vrsta, nivelaciju terena.
+~ Visoko realisticni stil rendera najbolje prikazuje ,"atmosferu u prostoru" zahvaljujuci mogucnostima softvera da se manipulise vremenskim prilikama, svetlosnim i drugim efektima.
+~ Umetnicki stil je vrlo interesantan stil u vidu efekta rucnog crtanja. Modelovanje se takodje vrsi uz pomoc kompjuterskog softvera. 
 Pruzamo uslugu modelovanja gradjevinskih objekata, eksterijera i svih pratecih elemenata kao sto su zastori, vodene povrsine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Modelovanje se vrsi na osnovu 2D planova ili skica sa merama i fotografija. Krajnji proizvod koji Vam isporucujemo su 3D renderi i 3D animacije. `,
         english: `We offer 3 renderings styles:
->> Realistic style is technically more precise and dependable shows area proportions, material textures, plant species, terrain.
->> High realistic style renderings are great for "area life atmosphere". The 3D software ability enables to manipulate with lights effect, weather and other effect and that make space alive. 
->> Art style is the best for art lovers. We are creating digital hand – drawn renderings. 
+
+~ Realistic style is technically more precise and dependable shows area proportions, material textures, plant species, terrain.
+~ High realistic style renderings are great for "area life atmosphere". The 3D software ability enables to manipulate with lights effect, weather and other effect and that make space alive. 
+~ Art style is the best for art lovers. We are creating digital hand – drawn renderings. 
 We create a 3D models of buildings, exteriors with all elements such as hardscapes, xeriscapes, patios, covered patios, pergolas, pools and spas, fountains, greenery, green walls, etc.
 For modeling, we use a Site plan or sketches with basic measurements and photos of the area.
 We provide you with 3D renderings and a 3D walkthrough.`,

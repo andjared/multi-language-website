@@ -18,16 +18,18 @@ const AboutUs = () => {
         <div className="text">
           <p>{translations.clients[language]} </p>
         </div>
-        {logos.map((logo) => {
-          return (
-            <img
-              src={logo.url}
-              alt=""
-              key={logo.id}
-              className={logo.id === 1 ? "one" : "other"}
-            />
-          );
-        })}
+        <div className="logos">
+          {logos.map((logo) => {
+            return (
+              <img
+                src={logo.url}
+                alt=""
+                key={logo.id}
+                className={logo.id === 1 ? "one" : "other"}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
