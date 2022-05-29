@@ -1,7 +1,7 @@
 export const translations = {
   navbar: {
     home: {
-      serbian: "Pocetna",
+      serbian: "Početna",
       english: "Home",
     },
     aboutUs: {
@@ -22,7 +22,7 @@ export const translations = {
     },
   },
   footer: {
-    serbian: "Studio za 3D vizualizacije i pejzaznu arhitekturu",
+    serbian: "Studio za 3D vizualizacije i pejzažnu arhitekturu",
     english: "Landscape architecture and 3D visualizations",
   },
   aboutUs: {
@@ -55,11 +55,11 @@ export const translations = {
         english: "3D visualizations",
       },
       second: {
-        serbian: "Izrada pejzazno-arhitektonskog plana",
+        serbian: "Izrada pejzažno-arhitektonskog plana",
         english: "Landscape master plan",
       },
       third: {
-        serbian: "Kreiranje konceptualnog idejnog resenja - brendiranje",
+        serbian: "Kreiranje konceptualnog idejnog rešenja - brendiranje",
         english: "Creating a concept of design-landscape branding",
       },
       fourth: {
@@ -70,10 +70,10 @@ export const translations = {
     chapters: {
       first: {
         serbian: `U ponudi je 3 stila renderovanja:
-~ Realisticni stil je tehnicki najprecizniji i najpouzdanije prikazuje proporcije prostora, materijale, izbor biljnih vrsta, nivelaciju terena.
-~ Visoko realisticni stil rendera najbolje prikazuje ,"atmosferu u prostoru" zahvaljujuci mogucnostima softvera da se manipulise vremenskim prilikama, svetlosnim i drugim efektima.
-~ Umetnicki stil je vrlo interesantan stil u vidu efekta rucnog crtanja. Modelovanje se takodje vrsi uz pomoc kompjuterskog softvera. 
-Pruzamo uslugu modelovanja gradjevinskih objekata, eksterijera i svih pratecih elemenata kao sto su zastori, vodene povrsine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Modelovanje se vrsi na osnovu 2D planova ili skica sa merama i fotografija. Krajnji proizvod koji Vam isporucujemo su 3D renderi i 3D animacije. `,
+~ Realistični stil je tehnički najprecizniji i najpouzdanije prikazuje proporcije prostora, materijale, izbor biljnih vrsta, nivelaciju terena.
+~ Visoko realistični stil rendera najbolje prikazuje ,"atmosferu u prostoru" zahvaljujuci mogucnostima softvera da se manipuliše vremenskim prilikama, svetlosnim i drugim efektima.
+~ Umetnički stil je vrlo interesantan stil u vidu efekta ručnog crtanja. Modelovanje se takodje vrši uz pomoc kompjuterskog softvera. 
+Pruzamo uslugu modelovanja gradjevinskih objekata, eksterijera i svih pratecih elemenata kao sto su zastori, vodene površine i elementi sa vodom, vrtno arhitektonski element i zelenilo. Modelovanje se vrsi na osnovu 2D planova ili skica sa merama i fotografija. Krajnji proizvod koji Vam isporucujemo su 3D renderi i 3D animacije. `,
         english: `We offer 3 renderings styles:
 
 ~ Realistic style is technically more precise and dependable shows area proportions, material textures, plant species, terrain.
@@ -103,7 +103,7 @@ We make a selection of the best plant combinations for your growth conditions th
     },
     buttonTitle: {
       more: {
-        serbian: "Procitaj vise",
+        serbian: "Pročitaj više",
         english: "See more",
       },
       less: {
@@ -132,11 +132,11 @@ We make a selection of the best plant combinations for your growth conditions th
   },
   form: {
     name: {
-      serbian: "Vase ime: ",
+      serbian: "Vaše ime: ",
       english: "Your name: ",
     },
     email: {
-      serbian: "Vasa email adresa: ",
+      serbian: "Vaša email adresa: ",
       english: "Your email adress: ",
     },
     subject: {
@@ -148,14 +148,14 @@ We make a selection of the best plant combinations for your growth conditions th
       english: "Message: ",
     },
     button: {
-      serbian: "Posalji",
+      serbian: "Pošalji",
       english: "Send",
     },
   },
   modal: {
     success: {
       header: {
-        serbian: "Poruka uspesno poslata.",
+        serbian: "Poruka uspešno poslata.",
         english: "Message sent successfully.",
       },
       content: {
@@ -173,7 +173,7 @@ We make a selection of the best plant combinations for your growth conditions th
         english: "Message wasn't sent.",
       },
       content: {
-        serbian: "Pokusajte ponovo.",
+        serbian: "Pokušajte ponovo.",
         english: "Try again.",
       },
       button: {
