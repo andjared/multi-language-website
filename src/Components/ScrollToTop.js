@@ -5,7 +5,6 @@ const ScrollToTop = () => {
   const location = useLocation();
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
-    console.log("scroll");
   }, [location?.pathname]);
 
   return null;

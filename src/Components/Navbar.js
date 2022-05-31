@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   return (
     <nav className="nav-bar">
-      <div className="logo">
+      <div className={`logo ${hamburgerMenu ? "closed" : "show"}`}>
         <i>
           <img src={logo} alt="" />
         </i>
