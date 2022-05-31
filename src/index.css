@@ -67,6 +67,9 @@ p {
   width: 7em;
   z-index: 1;
 }
+.logo img:hover {
+  cursor: pointer;
+}
 .nav-links {
   display: flex;
   padding: 0.5em;
