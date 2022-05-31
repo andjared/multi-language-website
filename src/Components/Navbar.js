@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { translations } from "../translations";
 import logo from "../assets/images/logo.png";
 import { useLanguage, useUpdateLanguage } from "./LanguageContext";
@@ -17,15 +17,20 @@ const Navbar = () => {
   const handleChangeLanguage = useUpdateLanguage();
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
+  let history = useHistory();
 
   const handleHamburgerMenu = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
+  const backToHome = () => {
+    history.push("/");
+  };
+
   return (
     <nav className="nav-bar">
       <div className={`logo ${hamburgerMenu ? "closed" : "show"}`}>
         <i>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" onClick={backToHome} />
         </i>
       </div>
 
