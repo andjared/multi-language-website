@@ -67,7 +67,7 @@ const ContactUs = () => {
             <i>
               <FaEnvelopeOpenText />
             </i>
-            <p>bastaisvasta@gmail.com</p>
+            <p>landessencestudio@gmail.com</p>
           </li>
           <li>
             <i>

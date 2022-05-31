@@ -180,6 +180,8 @@ p {
 }
 .bottom-box p {
   font-style: italic;
+  font-weight: 500;
+  color: var(--btn-bg-color);
 }
 .logos {
   display: flex;
@@ -366,7 +368,7 @@ img.one {
 }
 .btn {
   background-color: var(--bg-dark);
-  opacity: 90%;
+  opacity: 0.9;
   font-weight: bold;
   padding: 0.5em;
 }
@@ -642,11 +644,20 @@ textarea {
   .logos img.one {
     width: 8rem;
   }
+  .services {
+    margin-top: 7rem;
+    padding-bottom: 4rem;
+  }
+  .services .box {
+    padding: 2em 2em 0 2em;
+  }
   .services h2 {
     font-size: var(--big-font);
+    padding: 0 0 1em 0;
   }
+
   .services .text-box {
-    padding: 2em 0 2em 0;
+    padding: 1em 0 1em 0;
   }
   .services .text-box p {
     font-size: var(--small-font);
@@ -660,9 +671,6 @@ textarea {
   #gradation {
     margin-bottom: 5em;
     width: min(50em, 80%);
-  }
-  .image-gallery-icon {
-    display: none;
   }
   .map {
     height: 20em;
