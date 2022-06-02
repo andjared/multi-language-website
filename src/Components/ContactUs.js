@@ -67,13 +67,15 @@ const ContactUs = () => {
             <i>
               <FaEnvelopeOpenText />
             </i>
-            <p>landessencestudio@gmail.com</p>
+            <a href="mailto:landessencestudio@gmail.com">
+              landessencestudio@gmail.com
+            </a>
           </li>
           <li>
             <i>
               <FaWhatsapp />
             </i>
-            <p>+381616123173</p>
+            <a href="tel:+381616123173">+381616123173</a>
           </li>
         </ul>
       </div>

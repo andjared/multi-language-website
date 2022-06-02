@@ -9,6 +9,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 p {
   margin-block-start: 0;
@@ -338,12 +339,15 @@ img.one {
 /* -------------CONTACT US PAGE----------- */
 
 .contact-us {
+  height: 100%;
+  width: 100%;
   animation: transitionIn 2s;
   margin: 10em auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow-y: hidden;
 }
 .email-form {
   position: relative;
@@ -400,12 +404,13 @@ textarea {
 }
 .icons li {
   padding-top: 2em;
+  color: var(--links-color);
 }
 .icons i {
   font-size: x-large;
   padding-right: 0.5em;
 }
-.icons p {
+.icons li a {
   display: inline;
   color: var(--bg-dark);
   font-size: var(--big-font);

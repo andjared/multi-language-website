@@ -59,10 +59,10 @@ const Navbar = () => {
             <Link to="/about">{aboutUs[language]}</Link>
           </li>
           <li>
-            <Link to="/usluge">{services[language]}</Link>
+            <Link to="/services">{services[language]}</Link>
           </li>
           <li>
-            <Link to="/galery">{gallery[language]}</Link>
+            <Link to="/gallery">{gallery[language]}</Link>
           </li>
           <li>
             <Link to="/contact">{contact[language]}</Link>

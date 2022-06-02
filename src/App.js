@@ -24,16 +24,16 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <AboutUs />
             </Route>
-            <Route path="/usluge">
+            <Route exact path="/services">
               <Services />
             </Route>
-            <Route exact path="/galery">
+            <Route exact path="/gallery">
               <Gallery items={images} />
             </Route>
-            <Route path="/contact">
+            <Route exact path="/contact">
               <ContactUs />
             </Route>
           </Switch>

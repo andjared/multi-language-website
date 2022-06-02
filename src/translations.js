@@ -45,7 +45,7 @@ export const translations = {
           `,
   },
   clients: {
-    serbian: "Saradjivali smo sa: ",
+    serbian: "Sarađivali smo sa: ",
     english: "We worked with: ",
   },
   services: {
