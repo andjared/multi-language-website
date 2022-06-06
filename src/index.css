@@ -61,7 +61,7 @@ p {
 }
 .logo {
   position: relative;
-  left: -22vw;
+  left: -32vw;
 }
 .logo img {
   position: absolute;
@@ -367,9 +367,7 @@ img.one {
   padding: 0.7em;
   max-width: 60%;
 }
-/* .email-form input {
-   max-width: 40%;
- } */
+
 .email-form label {
   padding-block: 0.5em;
 }
@@ -456,9 +454,13 @@ textarea {
 .map {
   height: 40em;
   width: 40em;
-  /* margin: 0 auto; */
 }
-
+@media screen and (max-width: 1400px) {
+  .logo {
+    left: -20vw;
+    top: 2vh;
+  }
+}
 @media screen and (max-width: 1200px) {
   .logo {
     left: -7vw;
@@ -487,11 +489,10 @@ textarea {
   }
   .about-us {
     flex-direction: column;
-    /* padding: 2em; */
   }
   .about-us .top-box {
     flex-direction: column;
-    margin-top: 18vh;
+    margin-top: 4em;
   }
   .about-us-text {
     max-width: 80%;
@@ -572,6 +573,9 @@ textarea {
 
   .about-us {
     padding: 0;
+  }
+  .about-us .top-box {
+    margin-top: 18vh;
   }
   .bottom-box img {
     width: 3rem;
