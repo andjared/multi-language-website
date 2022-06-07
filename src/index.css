@@ -6,10 +6,14 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
+}
+.scroll {
+  overflow-y: hidden;
 }
 p {
   margin-block-start: 0;
@@ -145,8 +149,6 @@ p {
   }
 }
 .about-us {
-  /* width: 100vw;
-  height: 100vh; */
   display: flex;
   flex-direction: column;
   padding: 5em 2em 0 2em;
@@ -347,7 +349,6 @@ img.one {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  overflow-y: hidden;
 }
 .email-form {
   position: relative;
@@ -456,6 +457,9 @@ textarea {
   width: 40em;
 }
 @media screen and (max-width: 1400px) {
+  .scroll {
+    overflow: auto;
+  }
   .logo {
     left: -20vw;
     top: 2vh;
@@ -575,7 +579,7 @@ textarea {
     padding: 0;
   }
   .about-us .top-box {
-    margin-top: 18vh;
+    margin-top: 20vh;
   }
   .bottom-box img {
     width: 3rem;
