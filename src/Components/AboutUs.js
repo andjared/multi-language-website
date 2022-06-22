@@ -3,6 +3,7 @@ import { useLanguage } from "./LanguageContext";
 import imageProject from "../assets/images/aboutus.jpg";
 import logos from "../assets/logos";
 import { useEffect } from "react";
+
 const AboutUs = () => {
   const language = useLanguage();
   useEffect(() => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "./LanguageContext";
 import Button from "./Button";
-import imageModeling from "../assets/images/modelovanje.jpg";
+import imageModeling from "../assets/images/modeling.jpg";
 import imageProjecting from "../assets/images/masterplan.jpg";
 import imageBrending from "../assets/images/brending.jpg";
 import imagePlanting from "../assets/images/plantingplan.jpg";

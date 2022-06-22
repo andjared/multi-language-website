@@ -106,7 +106,7 @@ const Navbar = () => {
             <li>
               <i>
                 <a
-                  href="https://www.youtube.com/channel/UC7C3Gq-AndrYfkmJ5ZqsDUw/"
+                  href="https://www.youtube.com/channel/UCDdPdssHf7eVtFd4zCoCf7Q"
                   target="_blank"
                   rel="noreferrer"
                 >

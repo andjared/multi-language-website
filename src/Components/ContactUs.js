@@ -5,11 +5,13 @@ import { translations } from "../translations";
 import emailjs from "emailjs-com";
 import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import MyMap from "./MyMap";
+
 const ContactUs = () => {
   useEffect(() => {
     document.body.className = "scroll";
     return () => document.body.classList.remove("scroll");
   }, []);
+
   const language = useLanguage();
 
   // modal settings
