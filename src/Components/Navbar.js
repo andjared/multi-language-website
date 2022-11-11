@@ -1,7 +1,6 @@
 import { Link, useHistory } from "react-router-dom";
 import { translations } from "../translations";
 import logo from "../assets/images/logo.png";
-import { useLanguage, useUpdateLanguage } from "./LanguageContext";
 import {
   FaGlobe,
   FaInstagram,
@@ -10,11 +9,9 @@ import {
   FaYoutube,
   FaBars,
 } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const language = useLanguage();
-  const handleChangeLanguage = useUpdateLanguage();
+const Navbar = ({ language, handleChangeLanguage }) => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
   let history = useHistory();
@@ -22,9 +19,17 @@ const Navbar = () => {
   const handleHamburgerMenu = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
+
   const backToHome = () => {
     history.push("/");
   };
+
+  // useEffect(() => {
+  //   const isDesktop = window.matchMedia("(min-width: 860px)").matches;
+  //   window.addEventListener("resize", () => console.log(isDesktop));
+  //   return () =>
+  //     window.removeEventListener("resize", () => console.log(isDesktop));
+  // }, []);
 
   return (
     <nav className="nav-bar">

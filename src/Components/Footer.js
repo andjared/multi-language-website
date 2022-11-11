@@ -1,8 +1,5 @@
 import { translations } from "../../src/translations";
-import { useLanguage } from "./LanguageContext";
-const Footer = () => {
-  const language = useLanguage();
-
+const Footer = ({ language }) => {
   return (
     <div className="footer">
       <p> {translations.footer[language]}</p>

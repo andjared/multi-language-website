@@ -1,18 +1,15 @@
 import { useState, useRef, useEffect } from "react";
-import { useLanguage } from "./LanguageContext";
 import Modal from "./Modal";
 import { translations } from "../translations";
 import emailjs from "emailjs-com";
 import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import MyMap from "./MyMap";
 
-const ContactUs = () => {
+const ContactUs = ({ language }) => {
   useEffect(() => {
     document.body.className = "scroll";
     return () => document.body.classList.remove("scroll");
   }, []);
-
-  const language = useLanguage();
 
   // modal settings
   const [showModal, setShowModal] = useState(false);

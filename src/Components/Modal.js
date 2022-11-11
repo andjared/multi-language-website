@@ -1,8 +1,6 @@
 import { translations } from "../../src/translations";
-import { useLanguage } from "./LanguageContext";
 
-const Modal = ({ handleModal, successMessage }) => {
-  const language = useLanguage();
+const Modal = ({ handleModal, successMessage, language }) => {
   const { success, failed } = translations.modal;
   return (
     <div className="modal">

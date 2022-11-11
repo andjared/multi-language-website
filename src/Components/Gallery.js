@@ -3,11 +3,8 @@ import { translations } from "../translations";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import gradation from "../assets/images/gradation.jpg";
 import { useRef } from "react";
-import { useLanguage } from "./LanguageContext";
 
-const Gallery = ({ items }) => {
-  const language = useLanguage();
-
+const Gallery = ({ items, language }) => {
   const conceptRef = useRef(null);
   const handleScrollButton = () => {
     conceptRef.current.scrollIntoView({ behavior: "smooth" });

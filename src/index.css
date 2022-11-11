@@ -44,7 +44,6 @@ p {
 .nav-bar,
 .footer {
   background: var(--bg-dark);
-
   width: 100%;
   z-index: 1;
   padding: 1em;
@@ -192,17 +191,18 @@ p {
 .logos {
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
+.logos li:first-child img {
+  width: 8rem;
+}
 .logos img {
   align-self: center;
   margin: 1rem;
   width: 4rem;
   flex-basis: auto;
   padding: 1em;
-}
-img.one {
-  width: 8rem;
 }
 
 /* ------- SERVICES PAGE------------ */
@@ -560,6 +560,7 @@ textarea {
     font-size: 2em;
     color: var(--links-color);
     margin-top: 0.5em;
+    cursor: pointer;
   }
   .logo {
     top: 8vh;
