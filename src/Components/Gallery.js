@@ -6,9 +6,11 @@ import { useRef } from "react";
 
 const Gallery = ({ items, language }) => {
   const conceptRef = useRef(null);
+
   const handleScrollButton = () => {
     conceptRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div className="gallery-page">
       <div className="galleries">

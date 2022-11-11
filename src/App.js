@@ -51,7 +51,7 @@ function App() {
             <ContactUs language={language} />
           </Route>
         </Switch>
-        <Footer />
+        <Footer language={language} />
       </Router>
     </div>
   );
