@@ -11,12 +11,14 @@ const Services = ({ language }) => {
   const { title } = translations.services;
   const { buttonTitle } = translations.services;
 
-  const [readMoreFirst, setReadMoreFirst] = useState(true);
-  const [readMoreSecond, setReadMoreSecond] = useState(true);
-  const [readMoreThird, setReadMoreThird] = useState(true);
+  const [readMore, setReadMore] = useState([]);
 
-  const handleReadMore = (readMore, setReadMore) => {
-    setReadMore(!readMore);
+  const handleReadMore = (id) => {
+    setReadMore((prev) => [...prev, id]);
+  };
+
+  const handleReadLess = (id) => {
+    setReadMore((prev) => prev.filter((item) => item !== id));
   };
 
   return (
@@ -24,19 +26,26 @@ const Services = ({ language }) => {
       <div className="box">
         <div className="text-box">
           <h2>{title.first[language]}</h2>
-          <p>
-            {readMoreFirst
-              ? first[language].substring(0, 437)
-              : first[language]}
-          </p>
-          <Button
-            handleClick={() => handleReadMore(readMoreFirst, setReadMoreFirst)}
-            title={
-              readMoreFirst
-                ? buttonTitle.more[language]
-                : buttonTitle.less[language]
-            }
-          />
+          <p>{first[language].intro}</p>
+          <ul>
+            {first[language].styles.map((style, index) => (
+              <li key={index}>{style}</li>
+            ))}
+          </ul>
+          {readMore.includes(first.id) ? (
+            <>
+              <p>{first[language].more}</p>
+              <Button
+                handleClick={() => handleReadLess(first.id)}
+                title={buttonTitle.less[language]}
+              />
+            </>
+          ) : (
+            <Button
+              handleClick={() => handleReadMore(first.id)}
+              title={buttonTitle.more[language]}
+            />
+          )}
         </div>
         <div className="img-box">
           <img src={imageModeling} alt="3Dmodeling" />
@@ -48,39 +57,41 @@ const Services = ({ language }) => {
         </div>
         <div className="text-box">
           <h2>{title.second[language]}</h2>
-          <p>
-            {readMoreSecond
-              ? second[language].substring(0, 261)
-              : second[language]}
-          </p>
-          <Button
-            handleClick={() =>
-              handleReadMore(readMoreSecond, setReadMoreSecond)
-            }
-            title={
-              readMoreSecond
-                ? buttonTitle.more[language]
-                : buttonTitle.less[language]
-            }
-          />
+          <p>{second[language].intro}</p>
+          {readMore.includes(second.id) ? (
+            <>
+              <p>{second[language].more}</p>
+              <Button
+                handleClick={() => handleReadLess(second.id)}
+                title={buttonTitle.less[language]}
+              />
+            </>
+          ) : (
+            <Button
+              handleClick={() => handleReadMore(second.id)}
+              title={buttonTitle.more[language]}
+            />
+          )}
         </div>
       </div>
       <div className="box">
         <div className="text-box">
           <h2>{title.third[language]}</h2>
-          <p>
-            {readMoreThird
-              ? third[language].substring(0, 362) + "..."
-              : third[language]}
-          </p>
-          <Button
-            handleClick={() => handleReadMore(readMoreThird, setReadMoreThird)}
-            title={
-              readMoreThird
-                ? buttonTitle.more[language]
-                : buttonTitle.less[language]
-            }
-          />
+          <p>{third[language].intro}</p>
+          {readMore.includes(third.id) ? (
+            <>
+              <p>{third[language].more}</p>
+              <Button
+                handleClick={() => handleReadLess(third.id)}
+                title={buttonTitle.less[language]}
+              />
+            </>
+          ) : (
+            <Button
+              handleClick={() => handleReadMore(third.id)}
+              title={buttonTitle.more[language]}
+            />
+          )}
         </div>
         <div className="img-box">
           <img src={imageBrending} alt="landscapeBrending" />

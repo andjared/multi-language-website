@@ -229,20 +229,31 @@ footer p {
   padding: 2em;
   white-space: pre-wrap;
 }
+
 .img-box {
   padding: 3em;
 }
+
 .img-box img {
   border-top: 2vh solid var(--bg-dark);
   display: block;
   width: 100%;
 }
 
-.text-box p {
+.text-box ul {
+  list-style: none;
+}
+
+.text-box p,
+li {
   line-height: 1.5rem;
   font-size: var(--big-font);
   text-align: justify;
 }
+.text-box li {
+  display: inline-block;
+}
+
 .text-box h2 {
   text-align: center;
   padding: 20px;
