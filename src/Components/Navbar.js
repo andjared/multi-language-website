@@ -9,7 +9,7 @@ import {
   FaYoutube,
   FaBars,
 } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Navbar = ({ language, handleChangeLanguage }) => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -24,18 +24,24 @@ const Navbar = ({ language, handleChangeLanguage }) => {
     history.push("/");
   };
 
-  // useEffect(() => {
-  //   const isDesktop = window.matchMedia("(min-width: 860px)").matches;
-  //   window.addEventListener("resize", () => console.log(isDesktop));
-  //   return () =>
-  //     window.removeEventListener("resize", () => console.log(isDesktop));
-  // }, []);
+  const closeHamburgerMenuOnResize = useCallback(() => {
+    const media = window.matchMedia("(min-width : 860px)");
+    if (media.matches) {
+      setHamburgerMenu(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", closeHamburgerMenuOnResize);
+    return () =>
+      window.removeEventListener("resize", closeHamburgerMenuOnResize);
+  }, [closeHamburgerMenuOnResize]);
 
   return (
     <nav className="nav-bar">
       <div className={`logo ${hamburgerMenu ? "closed" : "show"}`}>
         <i>
-          <img src={logo} alt="" onClick={backToHome} />
+          <img src={logo} alt={logo} onClick={backToHome} />
         </i>
       </div>
 
