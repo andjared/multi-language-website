@@ -1,5 +1,15 @@
-# pejzaznArhitektura
-multi-language-website
+<div>
+<h2>Multi-language website built with React.</h2>
+<p>Represents  landscape architecture studio.</p>
+<p>Used Local Storage for language selection. </p>
+<p>Used React Rourter for multiple pages routes. </p>
+<p>Used Email.js for contact form. </p>
+<p>Deployed on Netlify: https://landessence.netlify.app/ </p>
+</div>
+
+---
+![multi-language-website](screenshot.jpg)
+
 
 
 # Getting Started with Create React App
