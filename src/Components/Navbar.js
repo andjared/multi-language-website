@@ -1,7 +1,6 @@
 import { Link, useHistory } from "react-router-dom";
 import { translations } from "../translations";
 import logo from "../assets/images/logo.png";
-import { useLanguage, useUpdateLanguage } from "./LanguageContext";
 import {
   FaGlobe,
   FaInstagram,
@@ -10,11 +9,9 @@ import {
   FaYoutube,
   FaBars,
 } from "react-icons/fa";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-const Navbar = () => {
-  const language = useLanguage();
-  const handleChangeLanguage = useUpdateLanguage();
+const Navbar = ({ language, handleChangeLanguage }) => {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
   let history = useHistory();
@@ -22,15 +19,29 @@ const Navbar = () => {
   const handleHamburgerMenu = () => {
     setHamburgerMenu(!hamburgerMenu);
   };
+
   const backToHome = () => {
     history.push("/");
   };
+
+  const closeHamburgerMenuOnResize = useCallback(() => {
+    const media = window.matchMedia("(min-width : 860px)");
+    if (media.matches) {
+      setHamburgerMenu(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", closeHamburgerMenuOnResize);
+    return () =>
+      window.removeEventListener("resize", closeHamburgerMenuOnResize);
+  }, [closeHamburgerMenuOnResize]);
 
   return (
     <nav className="nav-bar">
       <div className={`logo ${hamburgerMenu ? "closed" : "show"}`}>
         <i>
-          <img src={logo} alt="" onClick={backToHome} />
+          <img src={logo} alt={logo} onClick={backToHome} />
         </i>
       </div>
 

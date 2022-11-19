@@ -42,9 +42,8 @@ p {
   background-position: center;
 }
 .nav-bar,
-.footer {
+footer {
   background: var(--bg-dark);
-
   width: 100%;
   z-index: 1;
   padding: 1em;
@@ -92,7 +91,7 @@ p {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  font-size: var(--big-font);
+  font-size: var(--small-font);
   padding: 1.1em;
   color: var(--links-color);
 }
@@ -124,11 +123,11 @@ p {
   z-index: 1;
   align-items: flex-end;
 }
-.footer {
+footer {
   position: fixed;
   bottom: 0px;
 }
-.footer p {
+footer p {
   font-size: var(--big-font);
   text-transform: uppercase;
   text-align: center;
@@ -192,17 +191,18 @@ p {
 .logos {
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
+.logos li:first-child img {
+  width: 8rem;
+}
 .logos img {
   align-self: center;
   margin: 1rem;
   width: 4rem;
   flex-basis: auto;
   padding: 1em;
-}
-img.one {
-  width: 8rem;
 }
 
 /* ------- SERVICES PAGE------------ */
@@ -229,20 +229,31 @@ img.one {
   padding: 2em;
   white-space: pre-wrap;
 }
+
 .img-box {
   padding: 3em;
 }
+
 .img-box img {
   border-top: 2vh solid var(--bg-dark);
   display: block;
   width: 100%;
 }
 
-.text-box p {
+.text-box ul {
+  list-style: none;
+}
+
+.text-box p,
+li {
   line-height: 1.5rem;
   font-size: var(--big-font);
   text-align: justify;
 }
+.text-box li {
+  display: inline-block;
+}
+
 .text-box h2 {
   text-align: center;
   padding: 20px;
@@ -342,7 +353,6 @@ img.one {
 
 .contact-us {
   height: 100%;
-  width: 100%;
   animation: transitionIn 2s;
   margin: 10em auto;
   width: 100%;
@@ -415,27 +425,31 @@ textarea {
   font-size: var(--big-font);
   text-decoration: none;
 }
-.modal {
-  width: 40%;
+/* .modal {
+    min-width: 40%;
+  padding: 2rem;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: flex-start; 
   position: absolute;
   background-color: var(--bg-dark);
-  margin-inline: auto;
+   margin-inline: auto;
   color: var(--bg-dark);
   z-index: 1;
-}
+} */
+
 .modal-content {
   margin: 2em;
-  width: 60%;
+  color: var(--bg-dark);
   background-color: rgb(209, 204, 204);
   text-align: justify;
 }
+
 .modal-header,
 .modal-footer {
   padding: 2em;
 }
+
 .modal-title {
   margin: 0;
   font-weight: bolder;
@@ -447,6 +461,7 @@ textarea {
   border-bottom: 1px solid #eee;
   font-size: 1.3em;
 }
+
 .my-map {
   z-index: 0;
   margin: 0 auto;
@@ -488,7 +503,7 @@ textarea {
   .social-links ul li a {
     padding: 0.5em;
   }
-  .footer p {
+  footer p {
     font-size: var(--small-font);
   }
   .about-us {
@@ -560,6 +575,7 @@ textarea {
     font-size: 2em;
     color: var(--links-color);
     margin-top: 0.5em;
+    cursor: pointer;
   }
   .logo {
     top: 8vh;
@@ -644,7 +660,7 @@ textarea {
   }
 }
 @media screen and (max-width: 560px) {
-  .footer {
+  footer {
     padding: 1em 0 1em 0;
   }
   .about-us .bottom-box {
