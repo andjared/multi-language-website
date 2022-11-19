@@ -1,8 +1,7 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { translations } from "../translations";
 import logo from "../assets/images/logo.png";
 import {
-  FaGlobe,
   FaInstagram,
   FaBehanceSquare,
   FaLinkedin,
@@ -10,79 +9,68 @@ import {
   FaBars,
 } from "react-icons/fa";
 import { useCallback, useEffect, useState } from "react";
+import { Select } from "./Select";
 
 const Navbar = ({ language, handleChangeLanguage }) => {
-  const [hamburgerMenu, setHamburgerMenu] = useState(false);
+  const [selected, setSelected] = useState("serbian");
+
+  const [hiddenMenu, setHiddenMenu] = useState(false);
+
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
-  let history = useHistory();
 
-  const handleHamburgerMenu = () => {
-    setHamburgerMenu(!hamburgerMenu);
+  const handleHiddenMenu = () => {
+    setHiddenMenu(!hiddenMenu);
   };
 
-  const backToHome = () => {
-    history.push("/");
-  };
-
-  const closeHamburgerMenuOnResize = useCallback(() => {
+  const closeHiddenMenuOnResize = useCallback(() => {
     const media = window.matchMedia("(min-width : 860px)");
     if (media.matches) {
-      setHamburgerMenu(false);
+      setHiddenMenu(false);
     }
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", closeHamburgerMenuOnResize);
-    return () =>
-      window.removeEventListener("resize", closeHamburgerMenuOnResize);
-  }, [closeHamburgerMenuOnResize]);
+    window.addEventListener("resize", closeHiddenMenuOnResize);
+    return () => window.removeEventListener("resize", closeHiddenMenuOnResize);
+  }, [closeHiddenMenuOnResize]);
 
   return (
-    <nav className="nav-bar">
-      <div className={`logo ${hamburgerMenu ? "closed" : "show"}`}>
-        <i>
-          <img src={logo} alt={logo} onClick={backToHome} />
-        </i>
+    <header>
+      <div className="logo">
+        <Link to="/">
+          <img src={logo} alt={logo} />
+        </Link>
       </div>
-
-      <div className="lang">
-        <i>
-          <FaGlobe />
-        </i>
-        <select
-          value={language}
-          id="language"
-          onChange={(e) => handleChangeLanguage(e.target.value)}
-        >
-          <option value="english">English</option>
-          <option value="serbian">Srpski</option>
-        </select>
-      </div>
-      <i id="hamburger-menu-icon" onClick={handleHamburgerMenu}>
+      <div className="hidden-menu">
         <FaBars />
-      </i>
-      <div className={`nav-links ${hamburgerMenu ? "open" : "closed"}`}>
-        <ul className="pages-links" onClick={handleHamburgerMenu}>
-          <li>
-            <Link to="/">{home[language]}</Link>
-          </li>
-          <li>
-            <Link to="/about">{aboutUs[language]}</Link>
-          </li>
-          <li>
-            <Link to="/services">{services[language]}</Link>
-          </li>
-          <li>
-            <Link to="/gallery">{gallery[language]}</Link>
-          </li>
-          <li>
-            <Link to="/contact">{contact[language]}</Link>
-          </li>
-        </ul>
-        <div className="social-links">
-          <ul>
-            <li>
-              <i>
+      </div>
+      <nav className={hiddenMenu ? "hidden-nav" : "main-nav"}>
+        <>
+          <Select
+            selected={selected}
+            setSelected={setSelected}
+            changeLanguage={handleChangeLanguage}
+          />
+          <div className={hiddenMenu ? "open" : "closed"}>
+            <ul className="pages-links" onClick={handleHiddenMenu}>
+              <li>
+                <Link to="/">{home[language]}</Link>
+              </li>
+              <li>
+                <Link to="/about">{aboutUs[language]}</Link>
+              </li>
+              <li>
+                <Link to="/services">{services[language]}</Link>
+              </li>
+              <li>
+                <Link to="/gallery">{gallery[language]}</Link>
+              </li>
+              <li>
+                <Link to="/contact">{contact[language]}</Link>
+              </li>
+            </ul>
+            <ul className="social-links">
+              <li>
                 <a
                   href="https://www.behance.net/musmulica104166?fbclid=IwAR0JWTmHbbkSXMWf5sux4ac3fHH2tk0ttvZKfoTKmLJ9km1kEia2XAO7f9A"
                   target="_blank"
@@ -90,10 +78,8 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                 >
                   <FaBehanceSquare />
                 </a>
-              </i>
-            </li>
-            <li>
-              <i>
+              </li>
+              <li>
                 <a
                   href="https://www.linkedin.com/in/marjana-selakovic-259599177/?fbclid=IwAR0tK0LZLERgHK6305ZB6i_2oVnvkJRYWvuu0pK4fbNsZGswLzB9FuqeHjU"
                   target="_blank"
@@ -101,10 +87,8 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                 >
                   <FaLinkedin />
                 </a>
-              </i>
-            </li>
-            <li>
-              <i>
+              </li>
+              <li>
                 <a
                   href="https://www.instagram.com/landessence/"
                   target="_blank"
@@ -112,10 +96,8 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                 >
                   <FaInstagram />
                 </a>
-              </i>
-            </li>
-            <li>
-              <i>
+              </li>
+              <li>
                 <a
                   href="https://www.youtube.com/channel/UCDdPdssHf7eVtFd4zCoCf7Q"
                   target="_blank"
@@ -123,12 +105,12 @@ const Navbar = ({ language, handleChangeLanguage }) => {
                 >
                   <FaYoutube />
                 </a>
-              </i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+              </li>
+            </ul>
+          </div>
+        </>
+      </nav>
+    </header>
   );
 };
 
