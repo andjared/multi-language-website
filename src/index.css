@@ -249,7 +249,9 @@ li {
   line-height: 1.5rem;
   font-size: var(--big-font);
   text-align: justify;
+  white-space: normal;
 }
+
 .text-box li {
   display: inline-block;
 }
@@ -259,6 +261,7 @@ li {
   padding: 20px;
   color: rgb(100, 0, 0);
 }
+
 .services .button {
   color: var(--btn-bg-color);
   background: var(--links-color);
@@ -270,6 +273,7 @@ li {
   transition-duration: 0.4s;
   border: none !important;
 }
+
 .services .button:hover {
   cursor: pointer;
   text-shadow: 2px 2px 5px #2a08082d;
@@ -284,6 +288,7 @@ li {
 .gallery-page {
   text-align: center;
 }
+
 .galleries {
   animation: transitionIn 2s;
   display: flex;
@@ -292,37 +297,46 @@ li {
   margin-top: 20vh;
   margin-inline: auto;
 }
+
 .gallery {
   width: 30%;
   height: 30%;
   margin: 1em;
 }
+
 .gallery h2 {
   margin-bottom: 1.5em;
   text-align: left;
   text-transform: uppercase;
   color: var(--bg-dark);
 }
+
 .image-gallery-image {
   height: 20rem;
 }
+
 .fullscreen .image-gallery-image {
   height: 80vh;
 }
+
 .image-gallery-thumbnails {
   margin-top: 2em;
 }
+
 .image-gallery-thumbnail-image {
   height: 5rem;
 }
+
 .image-gallery-icon {
   color: var(--links-color);
 }
+
 .image-gallery-play-button,
 .image-gallery-right-nav,
 .image-gallery-left-nav {
   display: none;
 }
+
 .image-gallery-index {
   color: var(--links-color);
   font-weight: bold;
@@ -691,7 +705,8 @@ textarea {
   .services .text-box {
     padding: 1em 0 1em 0;
   }
-  .services .text-box p {
+  .services .text-box p,
+  .services .text-box li {
     font-size: var(--small-font);
   }
   .services .img-box {
