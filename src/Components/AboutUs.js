@@ -26,8 +26,8 @@ const AboutUs = ({ language }) => {
         <ul className="logos">
           {logos.map((logo) => {
             return (
-              <li>
-                <img src={logo.url} alt={logo.url} key={logo.id} />
+              <li key={logo.id}>
+                <img src={logo.url} alt={logo.url} />
               </li>
             );
           })}
