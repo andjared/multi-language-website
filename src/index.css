@@ -1,29 +1,13 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  width: 100vw;
-  max-height: 100vh;
-  overflow-x: hidden;
-}
-.scroll {
-  overflow-y: hidden;
-}
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-*,
-::after,
-::before {
-  box-sizing: inherit;
-}
+
 :root {
   --bg-dark: rgba(0, 0, 0, 0.6);
   --links-color: rgb(240, 202, 140);
@@ -31,6 +15,24 @@ p {
   --fonts: comicSans;
   --big-font: 1.2em;
   --small-font: 1em;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100vw;
+  max-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.scroll {
+  overflow-y: hidden;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .home {
@@ -51,14 +53,18 @@ footer {
 }
 
 header {
-  height: 4em;
-  position: fixed;
+  height: 6em;
+  position: sticky;
   top: 0px;
   left: 0px;
   right: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.transparent {
+  background-color: transparent;
 }
 
 .logo {
@@ -81,16 +87,20 @@ header {
 }
 
 .select .select-btn {
-  max-width: 80%;
   cursor: pointer;
-  padding: 0.5em 1em;
+  padding: 0.7em 1em;
   background-color: var(--bg-dark);
   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
   color: var(--links-color);
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+
+.select .select-btn span {
+  display: inline-block;
+  margin-left: 0.5em;
 }
 
 .select .select-content {
@@ -113,7 +123,7 @@ header {
   background-color: rgba(62, 61, 61, 0.6);
 }
 
-.hidden-menu {
+.menu-btn {
   display: none;
 }
 
@@ -125,13 +135,17 @@ header {
   padding: 0 4em 0 0;
 }
 
-nav ul {
+.main-nav ul {
   list-style: none;
+}
+
+.main-nav .links {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .main-nav ul li {
+  display: inline-block;
   margin: 0 0.5em;
 }
 
@@ -152,75 +166,12 @@ nav .pages-links li {
   padding: 0.5em;
 }
 
-/* #hamburger-menu-icon {
-  display: none;
-}
-.logo {
-  position: relative;
-  left: -32vw;
-}
-.logo img {
-  position: absolute;
-  width: 7em;
-  z-index: 1;
-}
-.logo img:hover {
-  cursor: pointer;
-}
-.nav-links {
-  display: flex;
-  padding: 0.5em;
-}
-.pages-links {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  align-items: center;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: var(--small-font);
-  padding: 1.1em;
-  color: var(--links-color);
-}
-.nav-links li:hover {
-  text-shadow: 2px 2px var(--btn-bg-color);
-}
-.lang {
-  color: var(--links-color);
-}
-
-.lang select {
-  margin-left: 0.8em;
-  color: var(--links-color);
-  background-color: var(--bg-dark);
-}
-.social-links ul {
-  display: flex;
-  list-style-type: none;
-  padding: 1em;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-basis: auto;
-}
-.social-links ul li a {
-  padding: 0.5em;
-  color: var(--links-color);
-}
-.social-links ul li i {
-  z-index: 1;
-  align-items: flex-end;
-} */
-
 footer {
   position: fixed;
   bottom: 0px;
+  height: 4em;
 }
+
 footer p {
   font-size: var(--big-font);
   text-transform: uppercase;
@@ -241,22 +192,25 @@ footer p {
     transform: rotateX(0);
   }
 }
+
 .about-us {
   display: flex;
   flex-direction: column;
-  padding: 5em 2em 0 2em;
+  padding: 2em 2em 0 2em;
 }
+
 .top-box {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 2.5em;
   align-items: center;
 }
+
 .top-box img {
   margin-top: 6vh;
   max-width: 100%;
 }
+
 .about-us-text p {
   font-size: 1.7vh;
   font-style: italic;
@@ -269,6 +223,7 @@ footer p {
   animation: transitionIn 2s;
   max-width: 40%;
 }
+
 .bottom-box {
   display: flex;
   flex-direction: column;
@@ -277,11 +232,12 @@ footer p {
   margin-top: 3em;
   padding-bottom: 3em;
 }
+
 .bottom-box p {
-  font-style: italic;
   font-weight: 500;
   color: var(--btn-bg-color);
 }
+
 .logos {
   display: flex;
   align-items: center;
@@ -289,13 +245,12 @@ footer p {
 }
 
 .logos li:first-child img {
-  width: 8rem;
+  max-width: 10rem;
 }
+
 .logos img {
   align-self: center;
-  margin: 1rem;
-  width: 4rem;
-  flex-basis: auto;
+  max-width: 6rem;
   padding: 1em;
 }
 
@@ -303,7 +258,6 @@ footer p {
 
 .services {
   margin-inline: auto;
-  margin-block: 6rem;
   width: min(80%, 90vw);
   display: flex;
   flex-direction: column;
@@ -388,7 +342,7 @@ footer p {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  margin-top: 20vh;
+  margin-top: 5em;
   margin-inline: auto;
 }
 
@@ -436,13 +390,16 @@ footer p {
   font-weight: bold;
   z-index: 1;
 }
+
 .concept {
   margin-top: 4rem;
 }
+
 #downArrow {
   font-size: clamp(1.8em, 2.5rem, 2rem);
   color: rgb(0, 153, 153);
 }
+
 .concept p {
   padding: 1em;
   text-transform: uppercase;
@@ -450,6 +407,7 @@ footer p {
   font-weight: bold;
   color: rgb(0, 102, 102);
 }
+
 #gradation {
   width: min(50em, 50%);
   scroll-behavior: smooth;
@@ -462,12 +420,13 @@ footer p {
 .contact-us {
   height: 100%;
   animation: transitionIn 2s;
-  margin: 10em auto;
+  margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .email-form {
   position: relative;
   min-width: 35%;
@@ -480,6 +439,7 @@ footer p {
   background-color: var(--bg-dark);
   font-weight: bold;
 }
+
 .email-form input {
   color: var(--links-color);
   margin-block: 0.5em;
@@ -490,12 +450,14 @@ footer p {
 .email-form label {
   padding-block: 0.5em;
 }
+
 .btn {
   background-color: var(--bg-dark);
   opacity: 0.9;
   font-weight: bold;
   padding: 0.5em;
 }
+
 .btn:hover {
   cursor: pointer;
   background-color: white;
@@ -568,6 +530,7 @@ textarea {
   margin: 0 auto;
   padding-top: 6em;
 }
+
 .map {
   height: 40em;
   width: 40em;
@@ -579,15 +542,15 @@ textarea {
   }
 }
 @media screen and (max-width: 1200px) {
-  nav {
+  .main-nav {
     padding: 0 2em 0 0;
   }
 
-  nav ul li a {
+  .main-nav ul li a {
     font-size: 0.9em;
   }
 
-  nav .pages-links li {
+  .main-nav .pages-links li {
     padding: 0;
   }
 
@@ -608,6 +571,10 @@ textarea {
     margin-top: 4em;
   }
 
+  .about-us .top-box img {
+    margin-top: 0;
+  }
+
   .about-us-text {
     max-width: 80%;
   }
@@ -623,10 +590,6 @@ textarea {
 
   .bottom-box img {
     margin: 0;
-  }
-
-  .services {
-    margin-top: 4rem;
   }
 
   .services .box {
@@ -679,13 +642,19 @@ textarea {
 }
 
 @media screen and (max-width: 860px) {
-  .hidden-menu {
-    display: block;
+  .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     color: var(--links-color);
     font-size: var(--big-font);
-    margin-right: 1em;
     font-size: 3em;
     padding-top: 0.5em;
+    cursor: pointer;
+  }
+
+  .main-nav .links {
+    display: none;
   }
 
   .closed {
@@ -699,74 +668,89 @@ textarea {
     padding: 0.5em;
     display: flex;
   }
-  /* #hamburger-menu-icon {
-    display: block;
-    font-size: 2em;
-    color: var(--links-color);
-    margin-top: 0.5em;
-    cursor: pointer;
+
+  .select .select-content {
+    top: 100%;
+    right: 0.5em;
+    margin-left: 0.5em;
   }
+
   .logo {
-    top: 8vh;
-    left: 70vw;
+    max-width: 5em;
   }
+
   .logo img {
     padding: 1vh;
   }
-  .nav-bar {
-    height: fit-content;
+
+  .hidden-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  } */
-
-  .about-us {
-    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
   }
 
-  .about-us .top-box {
-    margin-top: 20vh;
+  .close-btn {
+    font-size: 2em;
+    color: var(--links-color);
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
   }
 
-  .bottom-box img {
-    width: 3rem;
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
 
-  .bottom-box img.one {
-    width: 6rem;
+  .open ul {
+    list-style: none;
+  }
+
+  .open .social-links li {
+    display: inline-block;
+    margin: 0 0.5em;
   }
 
   .closed {
     display: none;
   }
 
-  .open {
+  .open .links {
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     flex-direction: column;
   }
 
-  /* .open .pages-links {
-    flex-direction: column;
-    justify-content: flex-start;
+  .about-us {
+    padding: 0;
   }
 
-  .pages-links li {
-    text-align: justify;
-    margin: 0.5em;
+  .about-us .top-box .img {
+    max-width: 80%;
   }
-
-  .open .social-links li {
-    padding: 0.5em;
-  } */
 
   .services {
     width: 100%;
   }
 
-  .img-box {
+  .services .img-box {
     padding: 1em;
+  }
+
+  .galleries {
+    margin-top: 2em;
   }
 
   .gallery h2 {
@@ -774,8 +758,8 @@ textarea {
   }
 
   .contact-us {
-    /* margin-top: 18vh; */
     flex-direction: column;
+    margin-top: 2em;
   }
 
   .contact-details .icons {
@@ -800,33 +784,35 @@ textarea {
     height: 100%;
   }
 }
+
 @media screen and (max-width: 560px) {
-  .hidden-menu {
+  header {
+    padding: 0;
+  }
+
+  .menu-btn {
     font-size: 2em;
   }
+
   footer {
     padding: 1em 0 1em 0;
   }
 
   .about-us .bottom-box {
-    margin-bottom: 4em;
+    margin: 1em auto;
   }
 
-  .logos {
+  .about-us .logos {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1em;
   }
 
-  .logos img {
-    width: 6rem;
-  }
-
-  .logos img.one {
+  .logos li:first-child img {
     width: 8rem;
   }
 
   .services {
-    margin-top: 7rem;
     padding-bottom: 4rem;
   }
 
@@ -842,6 +828,7 @@ textarea {
   .services .text-box {
     padding: 1em 0 1em 0;
   }
+
   .services .text-box p,
   .services .text-box li {
     font-size: var(--small-font);
