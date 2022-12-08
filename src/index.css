@@ -38,7 +38,7 @@ p {
 .home {
   height: 100vh;
   width: 100vw;
-  background-image: url("assets/images/naslovna.jpg");
+  background-image: url("assets/images/frontpage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
