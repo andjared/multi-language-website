@@ -10,7 +10,7 @@ const AboutUs = ({ language }) => {
   }, []);
 
   return (
-    <div className="about-us">
+    <section className="page about-us">
       <div className="top-box">
         <div className="about-us-text">
           <p>{translations.aboutUs[language]}</p>
@@ -33,7 +33,7 @@ const AboutUs = ({ language }) => {
           })}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

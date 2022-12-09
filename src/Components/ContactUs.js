@@ -53,7 +53,7 @@ const ContactUs = ({ language }) => {
   };
 
   return (
-    <div className="contact-us">
+    <section className="page contact-us">
       {showModal ? (
         <Modal
           handleModal={handleModal}
@@ -95,7 +95,7 @@ const ContactUs = ({ language }) => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
