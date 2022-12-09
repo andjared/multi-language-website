@@ -12,7 +12,7 @@ const Gallery = ({ items, language }) => {
   };
 
   return (
-    <div className="gallery-page">
+    <section className="page gallery-page">
       <div className="galleries">
         <div className="gallery">
           <h2>{translations.gallery.first[language]} </h2>
@@ -46,7 +46,7 @@ const Gallery = ({ items, language }) => {
         <p>{translations.concept[language]} </p>
         <img id="gradation" src={gradation} alt="" ref={conceptRef} />
       </div>
-    </div>
+    </section>
   );
 };
 

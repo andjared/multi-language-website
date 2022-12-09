@@ -12,7 +12,6 @@
   --bg-dark: rgba(0, 0, 0, 0.6);
   --links-color: rgb(240, 202, 140);
   --btn-bg-color: rgb(49, 3, 3);
-  --fonts: comicSans;
   --big-font: 1.2em;
   --small-font: 1em;
 }
@@ -54,13 +53,23 @@ footer {
 
 header {
   height: 6em;
-  position: sticky;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  margin-top: 6em;
 }
 
 .transparent {
@@ -342,14 +351,14 @@ footer p {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  margin-top: 5em;
-  margin-inline: auto;
+  margin: 10em auto 0;
+  /* margin-inline: auto; */
 }
 
 .gallery {
   width: 30%;
   height: 30%;
-  margin: 1em;
+  margin: 1.5em;
 }
 
 .gallery h2 {
@@ -420,7 +429,7 @@ footer p {
 .contact-us {
   height: 100%;
   animation: transitionIn 2s;
-  margin: 0 auto;
+  margin: 8em auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -696,6 +705,7 @@ textarea {
     justify-content: center;
     text-align: center;
     transition: all 0.1s ease-in-out;
+    z-index: 1000;
   }
 
   .close-btn {
@@ -759,7 +769,6 @@ textarea {
 
   .contact-us {
     flex-direction: column;
-    margin-top: 2em;
   }
 
   .contact-details .icons {
@@ -792,10 +801,6 @@ textarea {
 
   .menu-btn {
     font-size: 2em;
-  }
-
-  footer {
-    padding: 1em 0 1em 0;
   }
 
   .about-us .bottom-box {
