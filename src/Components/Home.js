@@ -4,7 +4,7 @@ const Home = () => {
     document.body.className = "scroll";
     return () => document.body.classList.remove("scroll");
   }, []);
-  return <div className="home"></div>;
+  return <section className="home"></section>;
 };
 
 export default Home;

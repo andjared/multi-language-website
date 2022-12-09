@@ -22,7 +22,7 @@ const Services = ({ language }) => {
   };
 
   return (
-    <div className="services">
+    <section className="page services">
       <div className="box">
         <div className="text-box">
           <h2>{title.first[language]}</h2>
@@ -106,7 +106,7 @@ const Services = ({ language }) => {
           <p>{fourth[language]}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
