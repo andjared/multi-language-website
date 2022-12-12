@@ -16,6 +16,33 @@
   --small-font: 1em;
 }
 
+/* //webkit scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--links-color);
+  border-radius: 5px;
+  border: 2px solid var(--bg-dark);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-dark);
+}
+
+/* //firefox scrollbar support */
+@supports (scrollbar-color: yellow black) {
+  * {
+    scrollbar-color: vars(--links-color) var(--bg-dark);
+    scrollbar-width: thin;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -23,6 +50,10 @@ body {
   max-height: 100vh;
   position: relative;
   overflow-x: hidden;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 .disable-scroll {

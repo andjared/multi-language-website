@@ -12,10 +12,15 @@ import {
 import { useCallback, useEffect, useState } from "react";
 import { Select } from "./Select";
 
-const Navbar = ({ language, handleChangeLanguage }) => {
+const Navbar = ({
+  language,
+  handleChangeLanguage,
+  showHiddenNav,
+  setShowHiddenNav,
+}) => {
   const [selected, setSelected] = useState("serbian");
 
-  const [showHiddenNav, setShowHiddenNav] = useState(false);
+  // const [showHiddenNav, setShowHiddenNav] = useState(false);
 
   const { home, aboutUs, services, gallery, contact } = translations.navbar;
 
