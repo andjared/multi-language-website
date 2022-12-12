@@ -119,7 +119,7 @@ const Navbar = ({
               </li>
               <li>
                 <a
-                  href="https://www.youtube.com/channel/UCDdPdssHf7eVtFd4zCoCf7Q"
+                  href="https://www.youtube.com/@landessence2383"
                   target="_blank"
                   rel="noreferrer"
                 >
