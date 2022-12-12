@@ -2,12 +2,23 @@ import { translations } from "../../src/translations";
 import imageProject from "../assets/images/aboutus.jpg";
 import logos from "../assets/logos";
 import { useEffect } from "react";
+import useToggleScroll from "./useToggleScroll";
 
 const AboutUs = ({ language }) => {
+  const { handleScroll, isDesktop } = useToggleScroll();
+
   useEffect(() => {
-    document.body.className = "scroll";
-    return () => document.body.classList.remove("scroll");
-  }, []);
+    window.addEventListener("resize", handleScroll);
+    if (document.readyState === "complete") {
+      handleScroll();
+    } else {
+      window.addEventListener("load", handleScroll);
+    }
+    return () => {
+      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("load", handleScroll);
+    };
+  }, [isDesktop, handleScroll]);
 
   return (
     <section className="page about-us">

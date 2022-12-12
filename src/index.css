@@ -25,7 +25,7 @@ body {
   overflow-x: hidden;
 }
 
-.scroll {
+.disable-scroll {
   overflow-y: hidden;
 }
 
@@ -545,11 +545,6 @@ textarea {
   width: 40em;
 }
 
-@media screen and (max-width: 1400px) {
-  .scroll {
-    overflow: auto;
-  }
-}
 @media screen and (max-width: 1200px) {
   .main-nav {
     padding: 0 2em 0 0;
