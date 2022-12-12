@@ -2,7 +2,7 @@ import ImageGallery from "react-image-gallery";
 import { translations } from "../translations";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import gradation from "../assets/images/gradation.jpg";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const Gallery = ({ items, language }) => {
   const conceptRef = useRef(null);
@@ -10,6 +10,11 @@ const Gallery = ({ items, language }) => {
   const handleScrollButton = () => {
     conceptRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    document.body.style.overflowY = "scroll";
+    return () => (document.body.style.overflowY = "");
+  }, []);
 
   return (
     <section className="page gallery-page">

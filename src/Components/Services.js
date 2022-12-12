@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 import imageModeling from "../assets/images/modeling.jpg";
 import imageProjecting from "../assets/images/masterplan.jpg";
@@ -10,6 +10,11 @@ const Services = ({ language }) => {
   const { first, second, third, fourth } = translations.services.chapters;
   const { title } = translations.services;
   const { buttonTitle } = translations.services;
+
+  useEffect(() => {
+    document.body.style.overflowY = "scroll";
+    return () => (document.body.style.overflowY = "");
+  }, []);
 
   const [readMore, setReadMore] = useState([]);
 

@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 const Home = () => {
   useEffect(() => {
-    document.body.className = "scroll";
-    return () => document.body.classList.remove("scroll");
+    document.body.style.overflowY = "hidden";
+    return () => (document.body.style.overflowY = "");
   }, []);
+
   return <section className="home"></section>;
 };
 

@@ -4,12 +4,23 @@ import { translations } from "../translations";
 import emailjs from "emailjs-com";
 import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import MyMap from "./MyMap";
+import useToggleScroll from "./useToggleScroll";
 
 const ContactUs = ({ language }) => {
+  const { handleScroll, isDesktop } = useToggleScroll();
+
   useEffect(() => {
-    document.body.className = "scroll";
-    return () => document.body.classList.remove("scroll");
-  }, []);
+    window.addEventListener("resize", handleScroll);
+    if (document.readyState === "complete") {
+      handleScroll();
+    } else {
+      window.addEventListener("load", handleScroll);
+    }
+    return () => {
+      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("load", handleScroll);
+    };
+  }, [isDesktop, handleScroll]);
 
   // modal settings
   const [showModal, setShowModal] = useState(false);
